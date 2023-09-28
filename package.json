@@ -1,0 +1,11 @@
+
+{
+    "scripts": {
+        "start-client": "cd client-side && npm run dev",
+        "build-client": "cd client-side && vite build",
+        "start-server": "cd server-side && node index.js",
+        "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
+        "build": "npm run build-client && cp -r client-side/dist server-side/",
+        "dev": "concurrently \"cd client-side && npm run dev\" \"cd server-side && node index.js\""
+      }
+}

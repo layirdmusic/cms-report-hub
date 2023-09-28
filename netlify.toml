@@ -1,0 +1,6 @@
+[build]
+  base = "server-side" # Set the base directory for the build (where the server-side code is)
+  publish = "client-side/build" # Set the directory with the built client-side files
+  command = "vite build" # Specify the build command for your project
+
+  
