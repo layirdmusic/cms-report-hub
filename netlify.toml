@@ -1,5 +1,0 @@
-[build]
-  base = "server-side"
-  command = "npm install && npm run build"
-  functions = "serverless_functions"
-  publish = "client-side/build"
