@@ -2,7 +2,7 @@
 * {
   box-sizing: Border-box;
   margin: 0;
-  Padding: 0
+  padding: 0
 }
 
 body {
@@ -438,6 +438,7 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 .customer-reports-buttons-container {
