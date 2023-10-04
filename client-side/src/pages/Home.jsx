@@ -18,6 +18,7 @@ import RegularIcon from "../images/regular-icon.svg"
 import DamageIcon from "../images/damage-icon.svg"
 import VaultedIcon from "../images/vaulted-icon.svg"
 import PackingIcon from "../images/packing-icon.svg"
+import Regular from "../Forms/regular";
 
 export default function Home(){
 
@@ -154,7 +155,7 @@ export default function Home(){
                         <div className="customer-reports-buttons-container">
                             <ul className="customer-reports-buttons">
                                 <li>
-                                    <a href="">
+                                    <a href="/regular">
                                         <div className="customer-reports-icon">
                                             <img src={RegularIcon} alt="" />
                                         </div>
@@ -238,6 +239,7 @@ export default function Home(){
                     </div>
                 </section>
             </main>
+            
         </div>
     )
 }
