@@ -9,7 +9,7 @@ export default function Regular() {
 
     const handleDownloadPdf = async () => {
     const element = printRef.current;
-    const canvas = await html2canvas(element);
+    const canvas = await html2canvas(element, {dpi: 1000});
     const data = canvas.toDataURL('image/png');
 
     const pdf = new jsPDF('l');
