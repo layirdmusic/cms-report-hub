@@ -51,6 +51,11 @@ img {
   --purple-ombre: linear-gradient(240deg, #8A6BB1 22.01%, #947DB0 68.24%);
   --blue-ombre: linear-gradient(106deg, #6F93B4 -10.71%, #5B7A96 61.42%);
   --green-ombre: linear-gradient(139deg, #6BA9B1 16.1%, #5D9299 76.68%);
+
+  /* Form Variables (Starts) */
+  --h1:13px;
+  --p: 20px
+  /* Form Variables (Ends) */
 }
 
 /* COLORS (ENDS) */
@@ -78,14 +83,19 @@ img {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.regular-form-title-container h2 {
-  font-size: 20px;
-  padding: 12px;
+.regular-form-title-container {
+  padding: 10px;
 }
 
-.regular-form-table-container h2 {
-  font-size: 17px
+.regular-form-title-container h2 {
+  font-size: 25px;
 }
+
+/* .regular-form-table-container h2,
+.regular-form-table-container p {
+  font-size: 10px;
+  line-height: 10px;
+} */
 
 .regular-form-table, 
 .regular-form-table td {
@@ -94,12 +104,12 @@ img {
 }
 
 .regular-form-table {
-  border: 3px solid var(--medium-black);
+  border: 5px solid var(--medium-black);
 }
 
-td {
+/* td {
   padding: 10px;
-}
+} */
 
 .regular-form-table {
   width: 100%;
@@ -107,25 +117,92 @@ td {
 
 .column-one {
   width: 299px;
+  padding: 0px;
 }
 .column-two {
   width: 336px;
+  padding: 0px;
 }
 .column-three {
   width: 261px;
+  padding: 0px;
 }
 .column-four {
   width: 205px;
+  padding: 0px;
 }
 .column-five {
   width: 340px;
+  padding: 0px;
 }
 .column-six {
   width: 174px;
+  padding: 0px;
+}
+
+.column-seven {
+  padding: 0px;
+}
+
+.form-row-one {
+  height: 100px;
+  font-size: var(--h1);
+}
+
+.form-row-one p {
+  font-size: var(--p);
+}
+
+.form-row-two {
+  font-size: var(--h1);
+  height: 65px;
+}
+
+.form-row-two P {
+  font-size: var(--p);
+}
+
+.form-row-three {
+  font-size: var(--h1);
+  height: 75px;
+}
+
+.form-row-three p {
+  font-size: var(--p);
+}
+
+.form-row-four {
+  font-size: var(--h1);
+  height: 100px;
+}
+
+.form-row-four p {
+  font-size: var(--p);
+}
+
+.form-row-five {
+  font-size: var(--h1);
+  height: 30px;
+}
+
+.form-row-six {
+  font-size: var(--h1);
+  height: 30px;
+}
+
+.form-row-seven {
+  font-size: var(--h1);
+  height: 30px;
+}
+
+.form-row-eight {
+  font-size: var(--h1);
+  height: 30px;
 }
 
 .form-row-nine {
-  height: 45px;
+  font-size: var(--h1);
+  height: 30px;
 }
 
 .form-row-middle {
