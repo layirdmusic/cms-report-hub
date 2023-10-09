@@ -15,7 +15,7 @@ export default function Regular() {
         console.log('Request Value:', request);
         console.log('Name Value:', name);
     
-        const response = await fetch('https://cms-reports.netlify.app/.netlify/functions/postFunction', {
+        const response = await fetch('https://cms-reports.netlify.app/client-side/functions/postFunction', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
