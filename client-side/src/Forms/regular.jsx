@@ -12,7 +12,7 @@ export default function Regular() {
         console.log('Request Value:', request);
         console.log('Name Value:', name);
     
-        const response = await fetch('/.netlify/functions/postFunction', {
+        const response = await fetch('/.netlify/lambda/postFunction', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
