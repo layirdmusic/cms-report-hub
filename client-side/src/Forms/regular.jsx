@@ -1,48 +1,37 @@
-import React, {useRef} from 'react'
-import { PDFDocument, rgb } from 'pdf-lib'
-import html2canvas from 'html2canvas';
+import React, { useState, useEffect } from 'react';
+
 
 
 export default function Regular() {
-    
-    const printRef = useRef();
 
-    const handleDownloadPdf = async () => {
-        const element = printRef.current;
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const request = document.querySelector('.form-request').value;
+        const name = document.querySelector('.form-name').value;
+
+        console.log('Request Value:', request);
+        console.log('Name Value:', name);
     
-        try {
-            const canvas = await html2canvas(element, {
-                scale: 3,
-                dpi: 1000
-            });
+        const response = await fetch('http://localhost:1337', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ request, name }),
+        });
+
+        window.open("https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/export?format=xlsx", "_blank")
     
-            const imageData = canvas.toDataURL('image/png');
-    
-            const pdfDoc = await PDFDocument.create();
-            const page = pdfDoc.addPage([canvas.width, canvas.height]);
-    
-            const pngImage = await pdfDoc.embedPng(imageData);
-            page.drawImage(pngImage, {
-                x: 0,
-                y: 0,
-                width: canvas.width,
-                height: canvas.height,
-            });
-    
-            const pdfBytes = await pdfDoc.save();
-            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'print.pdf';
-            link.click();
-        } catch (error) {
-            console.error('Error creating PDF:', error);
-        }
+        const data = await response.json();
+        console.log(data);
+
+
     };
+
 
     return (
         <>
-        <div ref={printRef} className='regular-form-container'>
+        <div className='regular-form-container'>
 
             <div className='regular-form-title-container'>
                 <h2>CENTRAL MOVING & STORAGE RECEIVING REPORT</h2>
@@ -574,7 +563,11 @@ export default function Regular() {
                 </table>
             </div>
         </div>
-        <button onClick={handleDownloadPdf}>CLICK</button>
+        <form className="form" id="sheetdb-form" onSubmit={handleSubmit}>
+        <input type="text" placeholder="Requests" className="form-request" name="request" />
+        <input type="text" placeholder="Name" id="name" className="form-name" />
+        <input className="button" type="submit"/>
+</form>
         </>
     )
 }
