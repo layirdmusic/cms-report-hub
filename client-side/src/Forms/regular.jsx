@@ -12,7 +12,7 @@ export default function Regular() {
         console.log('Request Value:', request);
         console.log('Name Value:', name);
     
-        const response = await fetch('/lambda/postFunction', {
+        const response = await fetch('/lambda/postFunction.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
