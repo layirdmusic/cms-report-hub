@@ -6,8 +6,8 @@ exports.handler = async function(event, context) {
   let name;
 
   try {
-    request = "hello";
-    name = "bye";
+    request = JSON.parse(event.body).request;
+    name = JSON.parse(event.body).name;
   } catch(error) {
     console.error('Error parsing JSON:', error)
   }
