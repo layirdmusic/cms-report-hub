@@ -16,7 +16,7 @@ export default function Regular() {
         e.preventDefault()
 
         try {
-        const response = await axios.post('/.netlify/functions/postFunction',{
+        const response = await axios.post('/functions/postFunction',{
             request: document.querySelector(".form-request").value,
             name: document.querySelector(".form-name").value
         })
