@@ -1,6 +1,6 @@
-const { google } = require("googleapis");
+import { google } from "googleapis";
 
-exports.handler = async function(event, context) {
+export async function handler(event, context) {
 
   let request
   let name;
@@ -53,4 +53,4 @@ exports.handler = async function(event, context) {
     statusCode: 200,
     body: JSON.stringify({ message: "Success" })
   };
-};
+}
