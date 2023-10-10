@@ -9,7 +9,7 @@ export default function Regular() {
 
     const fetchData = async () => {
         const results = await axios.get('/.netlify/functions/postFunction')
-        console.log("results.data.message")
+        console.log(results.data.message)
     }
     
     const postData = async (e) => {
