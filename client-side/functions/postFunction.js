@@ -14,7 +14,7 @@ exports.handler = async function(event, context) {
   
 
   const auth = new google.auth.GoogleAuth({
-      keyFile: "credentials.json",
+      keyFile: "./client-side/credentials.json",
       scopes: "https://www.googleapis.com/auth/spreadsheets"
   });
 
