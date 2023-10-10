@@ -9,7 +9,7 @@ export default function Regular() {
 
     const fetchData = async () => {
         const results = await axios.get('/.netlify/functions/postFunction')
-        console.log(results.data.message)
+        console.log("results.data.message")
     }
     
     const postData = async (e) => {
@@ -24,39 +24,13 @@ export default function Regular() {
         } catch(error) {
             console.log(error)
         }
+
+        window.open("https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/export?format=xlsx", "_blank")
     }
 
     useEffect(() => {
         fetchData()
     },[])
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const request = document.querySelector('.form-request').value;
-        const name = document.querySelector('.form-name').value;
-
-        console.log('Request Value:', request);
-        console.log('Name Value:', name);
-    
-        const response = await fetch('/functions/postFunction.js', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ request, name }),
-        });
-
-        setIframeKey(iframeKey + 1)
-
-        // window.open("https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/export?format=xlsx", "_blank")
-
-        
-    
-        const data = await response.json();
-        console.log(data);
-
-
-    };
 
 
     return (
