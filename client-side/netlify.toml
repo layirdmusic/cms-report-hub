@@ -1,2 +1,2 @@
 [build]
-    functions = "/client-side/functions"
+    functions = "functions"

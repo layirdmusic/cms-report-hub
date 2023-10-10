@@ -1,11 +1,34 @@
 import React, { useState, useEffect } from 'react';
 
-
+import axios from 'axios';
 
 
 export default function Regular() {
 
     const [iframeKey, setIframeKey] = useState(0)
+
+    const fetchData = async () => {
+        const results = await axios.get('/.netlify/functions/postFunction')
+        console.log(results.data.message)
+    }
+    
+    const postData = async (e) => {
+        e.preventDefault()
+
+        try {
+        const response = await axios.post('/.netlify/functions/postFunction',{
+            request: document.querySelector(".form-request").value,
+            name: document.querySelector(".form-name").value
+        })
+        console.log(response.data)
+        } catch(error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        fetchData()
+    },[])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -38,7 +61,7 @@ export default function Regular() {
 
     return (
         <>
-            <form className="form" id="sheetdb-form" onSubmit={handleSubmit}>
+            <form className="form" id="sheetdb-form" onSubmit={postData}>
             <input type="text" placeholder="Requests" className="form-request" name="request" />
             <input type="text" placeholder="Name" id="name" className="form-name" />
             <input className="button" type="submit"/>
