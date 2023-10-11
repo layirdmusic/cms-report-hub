@@ -2,12 +2,12 @@ import { google } from "googleapis";
 
 export async function handler(event, context) {
 
-  let request
-  let name;
+  let jobNameOne
+  let jobNameTwo;
 
   try {
-    request = JSON.parse(event.body).request;
-    name = JSON.parse(event.body).name;
+    jobNameOne = JSON.parse(event.body).jobNameOne;
+    jobNameTwo = JSON.parse(event.body).jobNameTwo;
   } catch(error) {
     console.error('Error parsing JSON:', error)
   }
@@ -46,8 +46,8 @@ export async function handler(event, context) {
     });
   };
 
-  await updateValues("Enter Data Here!B2", request);
-  await updateValues("Enter Data Here!B3", name);
+  await updateValues("Enter Data Here!B2", jobNameOne);
+  await updateValues("Enter Data Here!B3", jobNameTwo);
 
   return {
     statusCode: 200,
