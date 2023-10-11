@@ -60,8 +60,8 @@ export default function Regular() {
 
         try {
         const response = await axios.post('.netlify/functions/postFunction',{
-            jobNameOne: document.querySelector(".job-name-one").value,
-            jobNameTwo: document.querySelector(".job-name-two").value
+            jobNameOne: document.querySelector(".form-job-name-one").value,
+            jobNameTwo: document.querySelector(".form-job-name-two").value
         })
         console.log(response.data)
         } catch(error) {
