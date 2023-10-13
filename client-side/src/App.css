@@ -857,7 +857,8 @@ header {
 }
 
 .form-submit-button {
-  width: 444px;
+  width: 100%;
+  max-width: 444px;
   height: 50px;
   border: none;
   border-radius: 6px;
