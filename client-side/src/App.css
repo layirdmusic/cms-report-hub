@@ -995,7 +995,7 @@ header {
   /* FORMS (STARTS) */
 
   .form-inputs-section {
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
   .form-inputs-container {
