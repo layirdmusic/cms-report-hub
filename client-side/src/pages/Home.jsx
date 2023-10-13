@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import CMSLogo from "../images/cms-logo-1.svg"
-import HomeIcon from "../images/home-icon.svg"
-import HubIcon from "../images/hub-icon.svg"
-import NotesIcon from "../images/notes-icon.svg"
 import SearchIcon from "../images/search-icon.svg"
 import CMSLogoMobile from "../images/cms-logo-2.svg"
 import CMSIcon from "../images/cms-icon.svg"
@@ -18,7 +15,8 @@ import RegularIcon from "../images/regular-icon.svg"
 import DamageIcon from "../images/damage-icon.svg"
 import VaultedIcon from "../images/vaulted-icon.svg"
 import PackingIcon from "../images/packing-icon.svg"
-import Regular from "../Forms/regular";
+import Nav from "../Components/Nav";
+
 
 export default function Home(){
 
@@ -62,37 +60,7 @@ export default function Home(){
                         </div>
                     </div>
 
-                    <div className="nav-menu-buttons-container">
-                        <ul className="nav-menu-buttons">
-                            <li>
-                                <div className="nav-menu-button">
-                                    <div className="nav-icon">
-                                        <img src={HomeIcon} alt="" />
-                                    </div>
-                                    <h2>Dashboard</h2>
-                                </div>
-                                <div className="nav-button-highlight"></div>
-                            </li>
-                            <li>
-                                <div className="nav-menu-button">
-                                    <div className="nav-icon">
-                                        <img src={HubIcon} alt="" />
-                                    </div>
-                                    <h2>Customer Hub</h2>
-                                </div>
-                                <div className="nav-button-highlight"></div>
-                            </li>
-                            <li>
-                                <div className="nav-menu-button">
-                                    <div className="nav-icon">
-                                        <img src={NotesIcon} alt="" />
-                                    </div>
-                                    <h2>Notes</h2>
-                                </div>
-                                <div className="nav-button-highlight"></div>
-                            </li>
-                        </ul>
-                    </div>
+                    <Nav />
                 </div>
             </nav>
             <div className="mobile-nav-hamburger-line"></div>

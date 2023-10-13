@@ -3,25 +3,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import CMSLogo from "../images/cms-logo-1.svg"
-import HomeIcon from "../images/home-icon.svg"
-import HubIcon from "../images/hub-icon.svg"
-import NotesIcon from "../images/notes-icon.svg"
 import SearchIcon from "../images/search-icon.svg"
 import CMSLogoMobile from "../images/cms-logo-2.svg"
 import CMSIcon from "../images/cms-icon.svg"
 import Qoutes from "../Qoutes";
 import Greeting from "../images/greeting.svg"
 import SquarePanels from "../images/square-panels2.svg"
-import TomsIcon from "../images/toms-icon.svg"
-import WoldarfIcon from "../images/woldarf-icon.svg"
-import ChickenIcon from "../images/chicken-icon.svg"
-import AcornsIcon from "../images/acorns-icon.svg"
-import EmilieIcon from "../images/emilie-icon.svg"
-import RegularIcon from "../images/regular-icon.svg"
-import DamageIcon from "../images/damage-icon.svg"
-import VaultedIcon from "../images/vaulted-icon.svg"
-import PackingIcon from "../images/packing-icon.svg"
-// import Regular from "../Forms/regular";
+import Nav from '../Components/Nav';
+
 
 
 export default function Regular() {
@@ -70,6 +59,17 @@ export default function Regular() {
 
         // window.open("https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/export?format=xlsx", "_blank")
     }
+        const nextInput = (e) => {
+            
+            if(e.keyCode === 13){
+                document.querySelector(".form-job-name-two").focus()
+            }
+            
+        }
+        
+        
+    
+    
 
     useEffect(() => {
         fetchData()
@@ -80,11 +80,11 @@ export default function Regular() {
 
     return (
         <>
-            <form className="form" id="sheetdb-form" onSubmit={postData}>
+            {/* <form className="form" id="sheetdb-form" onSubmit={postData}>
             <input type="text" placeholder="Requests" className="form-request" name="request" />
             <input type="text" placeholder="Name" id="name" className="form-name" />
             <input className="button" type="submit"/>
-            </form>
+            </form> */}
 
             <div className="home-page-container">
                 <input checked={isChecked} onChange={handleToggle} className="nav-toggler" type="checkbox" />
@@ -103,37 +103,7 @@ export default function Regular() {
                             </div>
                         </div>
 
-                        <div className="nav-menu-buttons-container">
-                            <ul className="nav-menu-buttons">
-                                <li>
-                                    <div className="nav-menu-button">
-                                        <div className="nav-icon">
-                                            <img src={HomeIcon} alt="" />
-                                        </div>
-                                        <h2>Dashboard</h2>
-                                    </div>
-                                    <div className="nav-button-highlight"></div>
-                                </li>
-                                <li>
-                                    <div className="nav-menu-button">
-                                        <div className="nav-icon">
-                                            <img src={HubIcon} alt="" />
-                                        </div>
-                                        <h2>Customer Hub</h2>
-                                    </div>
-                                    <div className="nav-button-highlight"></div>
-                                </li>
-                                <li>
-                                    <div className="nav-menu-button">
-                                        <div className="nav-icon">
-                                            <img src={NotesIcon} alt="" />
-                                        </div>
-                                        <h2>Notes</h2>
-                                    </div>
-                                    <div className="nav-button-highlight"></div>
-                                </li>
-                            </ul>
-                        </div>
+                        <Nav />
                     </div>
                 </nav>
                 <div className="mobile-nav-hamburger-line"></div>
@@ -195,18 +165,19 @@ export default function Regular() {
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>DESCRIPTION</th>
-                                                <th>DATA</th>
+                                                <th className='row-heading'>DESCRIPTION</th>
+                                                <th className='row-heading'>DATA</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td className='row-label'>Job Name Line 1:</td>
-                                                <td><input type="text" className="form-job-name-one" name="job-name-one" /></td>
+                                                <td><input onKeyDown={(e) => nextInput(e)} type="text" className="form-job-name-one" name="job-name-one" /></td>
                                             </tr>
                                             <tr>
                                                 <td className='row-label'>Job Name Line 2:</td>
-                                                <td><input type="text" className="form-job-name-two" name="job-name-two" /></td>
+                                                <td><input type="text" className="form-job-name-two" 
+                                                name="job-name-two" /></td>
                                             </tr>
                                             <tr>
                                                 <td className='row-label'>Date Received:</td>
@@ -249,6 +220,96 @@ export default function Regular() {
                                 </div>
                                 <div className='form-product-inputs-container'>
                                     <h2>PRODUCT INFO</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th className='row-heading'>ITEM CODES</th>
+                                                <th className='row-heading'>DESCRIPTION</th>
+                                                <th className='row-heading'>LOCATION</th>
+                                                <th className='row-heading'>SKID/BX/CRATE #</th>
+                                                <th className='row-heading'>QUANTITY</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </for>
                             <div className='form-submit-button-container'>
