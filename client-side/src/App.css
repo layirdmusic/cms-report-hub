@@ -1007,7 +1007,7 @@ header {
     gap: 30px;
     width: 100%;
     padding: 30px;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
   .form-product-inputs-container{
