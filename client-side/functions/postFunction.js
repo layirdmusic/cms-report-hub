@@ -2,23 +2,32 @@ import { google } from "googleapis";
 
 export async function handler(event, context) {
 
-  let newValues
+  let newValues = {}
+  const responseBody = JSON.parse(event.body)
+
+  const valuesToBeUpdated = ["nameOne", "nameTwo", "date", "threePart", "poNum", "receivedBy", "bolNum", "carrier", "lbs", "totalCount", "vendor"]
+
+  for(let i = 0; i < valuesToBeUpdated.lenth; i++){
+    newValues[valuesToBeUpdated[i] = responseBody[valuesToBeUpdated[i]]]
+  }
 
   try {
 
-    newValues = {
-      nameOne : JSON.parse(event.body).nameOne,
-      nameTwo : JSON.parse(event.body).nameTwo,
-      date : JSON.parse(event.body).date,
-      threePart : JSON.parse(event.body).threePart,
-      poNum : JSON.parse(event.body).poNum,
-      receivedBy : JSON.parse(event.body).receivedBy,
-      bolNum : JSON.parse(event.body).bolNum,
-      carrier : JSON.parse(event.body).carrier,
-      lbs : JSON.parse(event.body).lbs,
-      totalCount : JSON.parse(event.body).totalCount,
-      vendor : JSON.parse(event.body).vendor,
-    }
+    newValues
+
+    // newValues = {
+    //   nameOne : JSON.parse(event.body).nameOne,
+    //   nameTwo : JSON.parse(event.body).nameTwo,
+    //   date : JSON.parse(event.body).date,
+    //   threePart : JSON.parse(event.body).threePart,
+    //   poNum : JSON.parse(event.body).poNum,
+    //   receivedBy : JSON.parse(event.body).receivedBy,
+    //   bolNum : JSON.parse(event.body).bolNum,
+    //   carrier : JSON.parse(event.body).carrier,
+    //   lbs : JSON.parse(event.body).lbs,
+    //   totalCount : JSON.parse(event.body).totalCount,
+    //   vendor : JSON.parse(event.body).vendor,
+    // }
 
 
 
