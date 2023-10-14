@@ -9,7 +9,7 @@ export async function handler(event, context) {
 
     const customerValues = ["nameOne", "nameTwo", "date", "threePart", "poNum", "receivedBy", "bolNum", "carrier", "lbs", "totalCount", "vendor"]
 
-    const  productValues = []
+    const productValues = []
 
     for(let i = 1; i <= 64; i++) {
       productValues.push(`item${[i]}`)
@@ -24,7 +24,7 @@ export async function handler(event, context) {
 
     newProductValues = {}
     for(let i = 0; i < productValues.length; i++){
-      newCustomerValues[productValues[i]] = responseBody[productValues[i]]
+      newProductValues[productValues[i]] = responseBody[productValues[i]]
     }
 
   } catch(error) {
