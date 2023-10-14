@@ -80,6 +80,7 @@ export default function Regular() {
             lbs: document.querySelector(".lbs").value,
             totalCount: document.querySelector(".total-count").value,
             vendor: document.querySelector(".vendor").value,
+            item1: document.querySelector(".item1").value,
         })
         console.log(response.data)
         setSuccessTitle("SUCCESS")
@@ -348,7 +349,7 @@ export default function Regular() {
                                                         <h2>ITEM CODE</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" className="item-one" name="item-code-one" />
+                                                        <input type="text" className="item1" name="item-code-one" />
                                                     </div>
                                                     <div className='form-row column-body'>
                                                         <input type="text" className="item-code-one" name="item-code-one" />

@@ -2,34 +2,30 @@ import { google } from "googleapis";
 
 export async function handler(event, context) {
 
-  let newValues
+  let newCustomerValues
+  let newProductValues
 
   try {
 
-    const valuesToBeUpdated = ["nameOne", "nameTwo", "date", "threePart", "poNum", "receivedBy", "bolNum", "carrier", "lbs", "totalCount", "vendor"]
+    const customerValues = ["nameOne", "nameTwo", "date", "threePart", "poNum", "receivedBy", "bolNum", "carrier", "lbs", "totalCount", "vendor"]
 
-    newValues = {}
-    const responseBody = JSON.parse(event.body)
+    const  productValues = []
 
-    for(let i = 0; i < valuesToBeUpdated.length; i++){
-      newValues[valuesToBeUpdated[i]] = responseBody[valuesToBeUpdated[i]]
+    for(let i = 1; i <= 64; i++) {
+      productValues.push(`item${[i]}`)
     }
 
-    // newValues = {
-    //   nameOne : JSON.parse(event.body).nameOne,
-    //   nameTwo : JSON.parse(event.body).nameTwo,
-    //   date : JSON.parse(event.body).date,
-    //   threePart : JSON.parse(event.body).threePart,
-    //   poNum : JSON.parse(event.body).poNum,
-    //   receivedBy : JSON.parse(event.body).receivedBy,
-    //   bolNum : JSON.parse(event.body).bolNum,
-    //   carrier : JSON.parse(event.body).carrier,
-    //   lbs : JSON.parse(event.body).lbs,
-    //   totalCount : JSON.parse(event.body).totalCount,
-    //   vendor : JSON.parse(event.body).vendor,
-    // }
+    newCustomerValues = {}
+    const responseBody = JSON.parse(event.body)
 
+    for(let i = 0; i < customerValues.length; i++){
+      newCustomerValues[customerValues[i]] = responseBody[customerValues[i]]
+    }
 
+    newProductValues = {}
+    for(let i = 0; i < productValues.length; i++){
+      newCustomerValues[productValues[i]] = responseBody[productValues[i]]
+    }
 
   } catch(error) {
     console.error('Error parsing JSON:', error)
@@ -70,17 +66,18 @@ export async function handler(event, context) {
   };
 
 
-  await updateValues("Enter Data Here!B2", newValues.nameOne);
-  await updateValues("Enter Data Here!B3", newValues.nameTwo);
-  await updateValues("Enter Data Here!B4", newValues.date);
-  await updateValues("Enter Data Here!B5", newValues.threePart);
-  await updateValues("Enter Data Here!B6", newValues.poNum);
-  await updateValues("Enter Data Here!B7", newValues.receivedBy);
-  await updateValues("Enter Data Here!B8", newValues.bolNum);
-  await updateValues("Enter Data Here!B9", newValues.carrier);
-  await updateValues("Enter Data Here!B10", newValues.lbs);
-  await updateValues("Enter Data Here!B11", newValues.totalCount);
-  await updateValues("Enter Data Here!B12", newValues.vendor);
+  await updateValues("Enter Data Here!B2", newCustomerValues.nameOne);
+  await updateValues("Enter Data Here!B3", newCustomerValues.nameTwo);
+  await updateValues("Enter Data Here!B4", newCustomerValues.date);
+  await updateValues("Enter Data Here!B5", newCustomerValues.threePart);
+  await updateValues("Enter Data Here!B6", newCustomerValues.poNum);
+  await updateValues("Enter Data Here!B7", newCustomerValues.receivedBy);
+  await updateValues("Enter Data Here!B8", newCustomerValues.bolNum);
+  await updateValues("Enter Data Here!B9", newCustomerValues.carrier);
+  await updateValues("Enter Data Here!B10", newCustomerValues.lbs);
+  await updateValues("Enter Data Here!B11", newCustomerValues.totalCount);
+  await updateValues("Enter Data Here!B12", newCustomerValues.vendor);
+  await updateValues("Enter Data Here!A18", newProductValues.item1);
   
 
   return {
