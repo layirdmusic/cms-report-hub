@@ -294,34 +294,34 @@ export default function Regular() {
                                                     
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-two" name="name-two" value={nameOne} />
+                                                    <input type="text" className="name-two" name="name-two" value={nameTwo} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="date" name="date" value={date} />
+                                                    <input type="text" className="date" name="date" value={date} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="three-part" name="three-part" value={threePart} />
+                                                    <input type="text" className="three-part" name="three-part" value={threePart} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="po-num" name="po-num" value={poNum} />
+                                                    <input type="text" className="po-num" name="po-num" value={poNum} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="received-by" name="received-by" value={receivedBy} />
+                                                    <input type="text" className="received-by" name="received-by" value={receivedBy} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="bol-num" name="bol-num" value={bolNum} />
+                                                    <input type="text" className="bol-num" name="bol-num" value={bolNum} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="carrier" name="carrier" value={carrier} />
+                                                    <input type="text" className="carrier" name="carrier" value={carrier} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="lbs" name="lbs" value={lbs} />
+                                                    <input type="text" className="lbs" name="lbs" value={lbs} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="total-count" name="total-count" value={totalCount} />
+                                                    <input type="text" className="total-count" name="total-count" value={totalCount} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="vendor" name="vendor" value={vendor} />
+                                                    <input type="text" className="vendor" name="vendor" value={vendor} onChange={(e) => handleInputValueChange(e)} />
                                                 </div>
                                             </div>
                                         </div>
