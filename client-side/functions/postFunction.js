@@ -6,12 +6,13 @@ export async function handler(event, context) {
   try {
 
     let valuesToUpdate =  ["nameOne", "nameTwo"]
-    nameOne = JSON.parse(event.body).nameOne;
-    nameTwo = JSON.parse(event.body).nameTwo;
+    let newValues = []
+    // nameOne = JSON.parse(event.body).nameOne;
+    // nameTwo = JSON.parse(event.body).nameTwo;
 
-    // for(let i = 0; i < valuesToUpdate.lenth; i++){
-    //   valuesToUpdate[i] = JSON.parse(event.body).valuesToUpdate[i]
-    // }
+    for(let i = 0; i < valuesToUpdate.lenth; i++){
+      newValues.push(valuesToUpdate[i] = JSON.parse(event.body).valuesToUpdate[i])
+    }
 
     date = JSON.parse(event.body).date;
     threePart = JSON.parse(event.body).threePart;
@@ -62,8 +63,8 @@ export async function handler(event, context) {
     });
   };
 
-  await updateValues("Enter Data Here!B2", nameOne);
-  await updateValues("Enter Data Here!B3", nameTwo);
+  await updateValues("Enter Data Here!B2", newValues[0]);
+  await updateValues("Enter Data Here!B3", newValues[1]);
   await updateValues("Enter Data Here!B4", date);
   await updateValues("Enter Data Here!B5", threePart);
   await updateValues("Enter Data Here!B6", poNum);
