@@ -2,10 +2,11 @@ import { google } from "googleapis";
 
 export async function handler(event, context) {
 
+  let newValues
 
   try {
 
-    let newValues = {
+    newValues = {
       nameOne : JSON.parse(event.body).nameOne,
       nameTwo : JSON.parse(event.body).nameTwo,
       date : JSON.parse(event.body).date,
@@ -18,7 +19,7 @@ export async function handler(event, context) {
       totalCount : JSON.parse(event.body).totalCount,
       vendor : JSON.parse(event.body).vendor,
     }
-    
+
 
 
   } catch(error) {
@@ -58,6 +59,7 @@ export async function handler(event, context) {
       },
     });
   };
+
 
   await updateValues("Enter Data Here!B2", newValues.nameOne);
   await updateValues("Enter Data Here!B3", newValues.nameTwo);
