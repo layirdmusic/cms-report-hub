@@ -103,6 +103,32 @@ export default function Regular() {
         setFormSubmitted(true)
     }
 
+    const handleInputValueChange = (e) => {
+        const nameOneValue = document.querySelector(".name-one").value
+        const nameTwoValue = document.querySelector(".name-two").value
+        const dateValue = document.querySelector(".date").value
+        const threePartValue = document.querySelector(".three-part").value
+        const poNumValue = document.querySelector(".po-num").value
+        const receivedByValue = document.querySelector(".received-by").value
+        const bolNumValue = document.querySelector(".bol-num").value
+        const carrierValue = document.querySelector(".carrier").value
+        const lbsValue = document.querySelector(".lbs").value
+        const totalCountValue = document.querySelector(".total-count").value
+        const vendorValue = document.querySelector(".vendor").value
+
+        setNameOne(nameOneValue)
+        setNameTwo(nameTwoValue)
+        setDate(dateValue)
+        setThreePart(threePartValue)
+        setPoNum(poNumValue)
+        setReceivedBy(receivedByValue)
+        setBolNum(bolNumValue)
+        setCarrier(carrierValue)
+        setLbs(lbsValue)
+        setTotalCount(totalCountValue)
+        setVendor(vendorValue)
+    }
+
     const nextInput = (e) => {
 
         if(e.keyCode === 13){
@@ -264,7 +290,7 @@ export default function Regular() {
                                                     <h2>DATA INPUT</h2>
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" value={nameOne} />
+                                                    <input type="text" className="name-one" name="name-one" value={nameOne} onChange={(e) => handleInputValueChange(e)}/>
                                                     
                                                 </div>
                                                 <div className='data-body'>
