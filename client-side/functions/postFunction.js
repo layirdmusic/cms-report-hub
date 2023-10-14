@@ -6,12 +6,12 @@ export async function handler(event, context) {
   try {
 
     let valuesToUpdate =  ["nameOne", "nameTwo"]
-    // nameOne = JSON.parse(event.body).nameOne;
-    // nameTwo = JSON.parse(event.body).nameTwo;
+    nameOne = JSON.parse(event.body).nameOne;
+    nameTwo = JSON.parse(event.body).nameTwo;
 
-    for(let i = 0; i < valuesToUpdate.lenth; i++){
-      valuesToUpdate[i] = JSON.parse(event.body).valuesToUpdate[i]
-    }
+    // for(let i = 0; i < valuesToUpdate.lenth; i++){
+    //   valuesToUpdate[i] = JSON.parse(event.body).valuesToUpdate[i]
+    // }
 
     date = JSON.parse(event.body).date;
     threePart = JSON.parse(event.body).threePart;
