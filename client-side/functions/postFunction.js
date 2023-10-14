@@ -2,12 +2,11 @@ import { google } from "googleapis";
 
 export async function handler(event, context) {
 
-  let nameOne
-  let nameTwo;
 
   try {
     nameOne = JSON.parse(event.body).nameOne;
     nameTwo = JSON.parse(event.body).nameTwo;
+    date = JSON.parse(event.body).date;
     threePart = JSON.parse(event.body).threePart;
     poNum = JSON.parse(event.body).poNum;
     receivedBy = JSON.parse(event.body).receivedBy;
@@ -56,14 +55,15 @@ export async function handler(event, context) {
 
   await updateValues("Enter Data Here!B2", nameOne);
   await updateValues("Enter Data Here!B3", nameTwo);
-  await updateValues("Enter Data Here!B4", threePart);
-  await updateValues("Enter Data Here!B5", poNum);
-  await updateValues("Enter Data Here!B6", receivedBy);
-  await updateValues("Enter Data Here!B7", bolNum);
-  await updateValues("Enter Data Here!B8", carrier);
-  await updateValues("Enter Data Here!B9", lbs);
-  await updateValues("Enter Data Here!B10", totalCount);
-  await updateValues("Enter Data Here!B11", vendor);
+  await updateValues("Enter Data Here!B4", date);
+  await updateValues("Enter Data Here!B5", threePart);
+  await updateValues("Enter Data Here!B6", poNum);
+  await updateValues("Enter Data Here!B7", receivedBy);
+  await updateValues("Enter Data Here!B8", bolNum);
+  await updateValues("Enter Data Here!B9", carrier);
+  await updateValues("Enter Data Here!B10", lbs);
+  await updateValues("Enter Data Here!B11", totalCount);
+  await updateValues("Enter Data Here!B12", vendor);
 
   return {
     statusCode: 200,
