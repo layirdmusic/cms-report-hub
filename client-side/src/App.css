@@ -43,13 +43,15 @@ img {
   --dark-black: #272727;
   --medium-black: #2F2F2F;
   --light-black: #333333;
-  --white: #ffffff;
+  --black-undertone: rgb(73, 72, 72);
+  --white: #fcfcfc;
   --purple: #947DB0;
   --blue: #6F93B4;
-  --gree: #5D9299;
+  --green: #5D9299;
   --purple-highlight: #584777;
   --primary-ombre-one: linear-gradient(90deg, #CF94FE 14.87%, #7193C7 82.28%);
   --primary-ombre-two: linear-gradient(90deg, #805A9E 14.87%, #5E7AA4 82.28%);
+  --primary-ombre-three: linear-gradient(90deg, #5E7AA4 14.87%, #805A9E 82.28%);
   --purple-ombre: linear-gradient(240deg, #8A6BB1 22.01%, #947DB0 68.24%);
   --blue-ombre: linear-gradient(106deg, #6F93B4 -10.71%, #5B7A96 61.42%);
   --green-ombre: linear-gradient(139deg, #6BA9B1 16.1%, #5D9299 76.68%);
@@ -742,18 +744,19 @@ header {
 
 /* REGULAR FORM PAGE (STARTS) */
 .form-inputs-section {
-  background-color: var(--dark-black);
+  background: var(--dark-black);
   height: fit-content;
   padding: 15px;
 }
 
 .form-inputs-content-container {
-  background-color: var(--medium-black);
+  background: var(--dark-black);
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
 }
 
 .form-inputs-container {
@@ -763,87 +766,20 @@ header {
   grid-template-columns: 1fr 2fr;
   width: 100%;
   padding: 30px;
-}
-
-.form-customer-inputs-container table {
-  background-color: var(--light-black);
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  overflow: hidden;
-  border-collapse: collapse;
-  font-size: 14px;
-  box-shadow: 0px 1px 50px 0px #8b6bb184;
-}
-.form-product-inputs-container table {
-  background-color: var(--light-black);
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  border-collapse: collapse;
-  font-size: 14px;
-  box-shadow: 0px 1px 50px 0px #8b6bb184;
-}
-
-.form-inputs-container table th {
-  /* border: 0.1px solid var(--white); */
-  border-bottom: var(--purple-highlight) 8px solid;
-  background-color: var(--dark-black);
-  color: var(--white);
-}
-
-.form-inputs-container table td {
-  border-bottom: var(--dark-black) solid 2px;
-  padding:5px 10px 6px 5px;
-}
-
-.form-inputs-container input {
-  height: 30px;
-  width: 100%;
-  background-color: var(--medium-black);
-  border: none;
-  border-radius: 6px;
-  color: var(--white);
-}
-
-
-.row-heading {
-  text-align: left;
-  padding: 5px;
-  height: 45px;
-}
-
-.row-label {
-  text-align: right;
-  padding: 2px 10px 2px 2px;
-  height: 35px;
-}
-
-.form-inputs-container h2 {
-  font-family: 'PrimaryFont1';
-  font-weight: 600;
-  margin-bottom: 15px;
+  gap: 20px;
 }
 
 .form-customer-inputs-container {
-  /* background-color: blue; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 15px;
+  height: fit-content;
 }
 
 .form-product-inputs-container {
-  /* background-color: purple; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 15px;
+  height: fit-content;
 }
+
+
+
+
 
 .form-submit-button-container {
   /* background-color:green; */
@@ -852,7 +788,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px 50px 20px;
+  padding: 70px 20px 50px 20px;
   width: 100%;
 }
 
@@ -869,6 +805,205 @@ header {
   color: var(--medium-black);
 }
 
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+
+.form-inputs-section{
+  height: 100%;
+}
+
+.customer-table-background {
+  height: 100%;
+  width: 100%;
+}
+
+.customer-table {
+  background-color: green;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  overflow: hidden;
+}
+
+.customer-table p {
+  text-align: right;
+  width: 100%;
+  font-size: 0.86vw;
+}
+
+.desc {
+  background-color: var(--dark-black);
+  display: grid;
+  grid-template-rows: 1.1fr repeat(11,1fr);
+}
+
+.desc div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.desc-body::after {
+  content: "";
+  background: var(--light-black);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+}
+
+.data-body::after {
+  content: "";
+  background: var(--light-black);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+}
+
+.desc div h2 {
+  width: 100%;
+  text-align: right;
+  font-size: 0.9vw;
+}
+
+.data div h2 {
+  font-size: 0.9vw;
+}
+
+.data {
+  background-color: var(--dark-black);
+  display: grid;
+  grid-template-rows: 1.1fr repeat(11,1fr);
+}
+
+.data {
+  border-left: var(--light-black) 2px solid;
+}
+
+.data div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.data div:nth-child(1),
+.desc div:nth-child(1){
+  border-bottom: var(--light-black) solid 2px;
+}
+
+.data div input {
+  height: 80%;
+  width: 100%;
+  border: none;
+  background:none;
+  text-align: center;
+  color: var(--white);
+  font-size: 0.87vw;
+}
+
+.data div input:focus {
+  outline: none;
+}
+
+.desc .form-header,
+.desc-body {
+  padding-right: 15px;
+}
+
+.product-table-base {
+  /* background-color: red; */
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.form-column {
+  display: grid;
+  grid-template-rows: 1.1fr repeat(11, 1fr);
+}
+
+.form-header {
+  height:40.7px;
+}
+
+.form-column:nth-child(2),
+.form-column:nth-child(3),
+.form-column:nth-child(4),
+.form-column:nth-child(5) {
+  border-left: 2px solid var(--light-black);
+}
+
+
+.form-column .column-header {
+  height: 100%
+}
+
+.column-header,
+.form-header {
+  background-color: var(--white);
+  color: var(--medium-black);
+}
+
+.product-table-base .header-one,
+.customer-table .header-one {
+  border-radius: 6px 0 0 0;
+}
+.product-table-base .header-five,
+.customer-table .header-two {
+  border-radius: 0 6px 0 0;
+}
+
+.form-column .column-header h2 {
+  font-size: 0.9vw;
+}
+
+.form-column .column-body {
+  /* background-color: purple; */
+  height: 37px;
+}
+
+.form-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-row::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--light-black);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.form-row input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: none;
+  color: var(--white);
+  font-size: 0.87vw;
+  text-align: center;
+}
+
+.form-row input:focus{
+  outline: none;
+}
 
 
 /* REGULAR FORM PAGE (ENDS) */
@@ -996,36 +1131,51 @@ header {
 
   /* FORMS (STARTS) */
 
-  .form-inputs-section {
-    overflow: hidden;
-  }
-
   .form-inputs-container {
     /* background-color: red; */
     height: fit-content;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 30px;
     width: 100%;
     padding: 30px;
     overflow: hidden;
   }
 
-  .form-product-inputs-container{
+  .scroll-box {
+    width: 100%;
     position: relative;
-    overflow: auto;
+    height: 450px;
+    overflow: scroll;
   }
 
-  .form-product-inputs-container table {
-    background-color: var(--light-black);
-    width: 900px;
-    border-radius: 10px;
-    border-collapse: collapse;
-    font-size: 14px;
-    box-shadow: 0px 1px 50px 0px #8b6bb184;
+  .product-table-base {
+    /* background-color: red; */
+    min-width: 900px;
     position: absolute;
-    left:17px
+    height: 100%;
+  }
+
+  .form-column .column-body {
+    height: auto;
+  }
+
+  .desc div h2 {
+    width: 100%;
+    text-align: right;
+    font-size: 2vw;
+  }
+  
+  .data div h2 {
+    font-size: 2vw;
+  }
+
+  .form-column .column-header h2 {
+    font-size: 2vw;
+  }
+
+  .customer-table p {
+    font-size: 2vw;
   }
   /* FORMS (ENDS) */
 
@@ -1104,10 +1254,26 @@ header {
     position: static;
   }
 
-  /* FORMS (STARTS) */
-  .form-product-inputs-container table {
-    box-shadow:none
+  .desc div h2 {
+    width: 100%;
+    text-align: right;
+    font-size: 3vw;
   }
+  
+  .data div h2 {
+    font-size: 3vw;
+  }
+
+  .form-column .column-header h2 {
+    font-size: 3vw;
+  }
+
+  .customer-table p {
+    font-size: 3vw;
+  }
+
+  /* FORMS (STARTS) */
+  
   /* FORMS(END) */
 
 }

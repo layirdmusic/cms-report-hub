@@ -161,66 +161,304 @@ export default function Regular() {
                         <form onSubmit={postData} className="form-inputs-content-container">
                             <for className='form-inputs-container'>
                                 <div className='form-customer-inputs-container'>
-                                    <h2>CUSTOMER INFO</h2>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th className='row-heading'>DESCRIPTION</th>
-                                                <th className='row-heading'>DATA</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td className='row-label'>Job Name Line 1:</td>
-                                                <td><input onKeyDown={(e) => nextInput(e)} type="text" className="form-job-name-one" name="job-name-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>Job Name Line 2:</td>
-                                                <td><input type="text" className="form-job-name-two" 
-                                                name="job-name-two" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>Date Received:</td>
-                                                <td><input type="text" className="form-data" name="data" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>3 Part Number:</td>
-                                                <td><input type="text" className="form-job-id" name="job-id" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>PO Number:</td>
-                                                <td><input type="text" className="form-job-po" name="job-po" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>Received By:</td>
-                                                <td><input type="text" className="form-job-receiver" name="job-receiver" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>BOL Number:</td>
-                                                <td><input type="text" className="form-job-bol" name="job-bol" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>Delivery Carrier:</td>
-                                                <td><input type="text" className="form-job-carrier" name="job-carrier" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>Lbs:</td>
-                                                <td><input type="text" className="form-job-lbs" name="job-lbs" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>Total Item Count:</td>
-                                                <td><input type="text" className="form-job-item-count" name="job-item-count" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-label'>Vendor:</td>
-                                                <td><input type="text" className="form-job-vendor" name="job-vendor" /></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <h2 className='form-title'>CUSTOMER INFO</h2>
+                                    <div className='customer-table-background'>
+                                        <div className='customer-table'>
+                                            <div className='desc'>
+                                                <div className='form-header header-one'>
+                                                    <h2>DATA TYPE</h2>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Job Name 1:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Job Name 2:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Date Received:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>3 Part Number:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>PO Number:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Received By:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>BOL Number:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Delivery Number:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Lbs:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Total Item Count:</p>
+                                                </div>
+                                                <div className='desc-body'>
+                                                    <p>Vendor:</p>
+                                                </div>
+                                            </div>
+                                            <div className='data'>
+                                                <div className='form-header header-two'>
+                                                    <h2>DATA INPUT</h2>
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                    
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                                <div className='data-body'>
+                                                    <input type="text" className="name-one" name="name-one" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
+
+
                                 <div className='form-product-inputs-container'>
-                                    <h2>PRODUCT INFO</h2>
-                                    <table>
+                                    <h2 className='form-title'>PRODUCT INFO</h2>
+                                        <div className='scroll-box'>
+                                            <div className='product-table-base'>
+                                                <div className='form-column'>
+                                                    <div className='form-row column-header header-one'>
+                                                        <h2>ITEM CODE</h2>
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                        <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                        <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                        <input type="text" className="item-code-one" name="item-code-one" />
+                                                    
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                        <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                </div>
+                                                <div className='form-column'>
+                                                    <div className='form-row column-header header-two'>
+                                                        <h2>DESCRIPTION</h2>
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                </div>
+                                                <div className='form-column'>
+                                                    <div className='form-row column-header header-three'>
+                                                        <h2>LOCATION</h2>
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                </div>
+                                                <div className='form-column'>
+                                                    <div className='form-row column-header header-four'>
+                                                        <h2>SKID | BOX | CRATE</h2>
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                </div>
+                                                <div className='form-column'>
+                                                    <div className='form-row column-header header-five'>
+                                                        <h2>QUANTITY</h2>
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                    <div className='form-row column-body'>
+                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    {/* <table>
                                         <thead>
                                             <tr>
                                                 <th className='row-heading'>ITEM CODES</th>
@@ -232,84 +470,114 @@ export default function Regular() {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-divider' colSpan={5}></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-divider' colSpan={5}></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-divider' colSpan={5}></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-divider' colSpan={5}></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-divider' colSpan={5}></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-divider' colSpan={5}></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-divider' colSpan={5}></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-divider' colSpan={5}></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-divider' colSpan={5}></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-divider' colSpan={5}></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
+                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> */}
                                 </div>
                             </for>
                             <div className='form-submit-button-container'>
