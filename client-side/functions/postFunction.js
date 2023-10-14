@@ -64,7 +64,10 @@ export async function handler(event, context) {
       },
     });
   };
-
+   
+  for(let i = 18; i <= 33; i++) {
+      await updateValues(`Enter Data Here!A${i}`, newProductValues[`item${i-17}`])
+  }
 
   await updateValues("Enter Data Here!B2", newCustomerValues.nameOne);
   await updateValues("Enter Data Here!B3", newCustomerValues.nameTwo);
@@ -77,7 +80,6 @@ export async function handler(event, context) {
   await updateValues("Enter Data Here!B10", newCustomerValues.lbs);
   await updateValues("Enter Data Here!B11", newCustomerValues.totalCount);
   await updateValues("Enter Data Here!B12", newCustomerValues.vendor);
-  await updateValues("Enter Data Here!A18", newProductValues.item1);
   
 
   return {
