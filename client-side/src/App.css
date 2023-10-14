@@ -1177,6 +1177,14 @@ header {
   .customer-table p {
     font-size: 2vw;
   }
+
+  .data div input {
+    font-size: 2vw;
+  }
+
+  .form-row input {
+    font-size: 2vw;
+  }
   /* FORMS (ENDS) */
 
 }
@@ -1269,6 +1277,14 @@ header {
   }
 
   .customer-table p {
+    font-size: 3vw;
+  }
+
+  .data div input {
+    font-size: 3vw;
+  }
+
+  .form-row input {
     font-size: 3vw;
   }
 
