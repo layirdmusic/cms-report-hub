@@ -103,7 +103,6 @@ export default function Regular() {
 
         } catch(error) {
             console.log(error)
-            console.log(items)
             setSuccessTitle("FAILED")
             setSuccessMsg("FORM DID NOT SUBMIT")
         }
