@@ -50,7 +50,7 @@ export default function Regular() {
         try {
         const response = await axios.post('.netlify/functions/postFunction',{
             nameOne: document.querySelector(".name-one").value,
-            NameTwo: document.querySelector(".name-two").value
+            nameTwo: document.querySelector(".name-two").value
         })
         console.log(response.data)
         } catch(error) {
