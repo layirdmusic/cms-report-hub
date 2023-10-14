@@ -10,6 +10,7 @@ import Qoutes from "../Qoutes";
 import Greeting from "../images/greeting.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
+import CloseIcon from "../images/close-icon.svg"
 
 
 
@@ -23,6 +24,9 @@ export default function Regular() {
     const currentWeekDay = weekDays[currentDate.getDay()]
     const currentDayNum = currentDate.getDate()
     const currentMonth = months[currentDate.getMonth()]
+    const [formSubmitted, setFormSubmitted] = useState(false)
+    const [successTitle, setSuccessTitle] = useState(null)
+    const [successMsg, setSuccessMsg] = useState(null)
     
     const handleToggle = () => {
         setIsChecked(!isChecked)
@@ -50,23 +54,32 @@ export default function Regular() {
         try {
         const response = await axios.post('.netlify/functions/postFunction',{
             nameOne: document.querySelector(".name-one").value,
-            nameTwo: document.querySelector(".name-two").value
+            nameTwo: document.querySelector(".name-two").value,
         })
         console.log(response.data)
+        setSuccessTitle("SUCCESS")
+        setSuccessMsg("FORM SUBMITTED")
         } catch(error) {
             console.log(error)
+            setSuccessTitle("FAILED")
+            setSuccessMsg("FORM DID NOT SUBMIT")
         }
 
-        // window.open("https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/export?format=xlsx", "_blank")
+        setFormSubmitted(true)
     }
 
-        const nextInput = (e) => {
+    const nextInput = (e) => {
 
-            if(e.keyCode === 13){
-                document.querySelector(".form-job-name-two").focus()
-            }
-
+        if(e.keyCode === 13){
+            document.querySelector(".form-job-name-two").focus()
         }
+    }
+
+    const closePopup = () => {
+        setFormSubmitted(false)
+    }
+
+    
 
 
     useEffect(() => {
@@ -85,6 +98,21 @@ export default function Regular() {
             </form> */}
 
             <div className="home-page-container">
+                <div className={`submit-popup-overlay ${formSubmitted? "overlay-show": "overlay-hide"}`}>
+                    <div className='submit-popup-base'>
+                        <div className='close-button-container'>
+                            <img onClick={closePopup} className='close-button' src={CloseIcon} alt="" />
+                        </div>
+                        <div className='message-container'>
+                            <h2>{successTitle}</h2>
+                            <p>{successMsg}</p>
+                            <div className='form-link-container'>
+                                <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=472786389" target='_blank'> View Form</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
                 <input checked={isChecked} onChange={handleToggle} className="nav-toggler" type="checkbox" />
                 <nav>
                     <div className="nav-elements-container">
