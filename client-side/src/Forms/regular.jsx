@@ -68,7 +68,7 @@ export default function Regular() {
 
         const items = {}
 
-        for(let i = 2; i <= 64; i++){
+        for(let i = 1; i <= 55; i++){
             items[`item${i}`] = document.querySelector(`.item${i}`).value
         }
 
@@ -85,7 +85,6 @@ export default function Regular() {
             lbs: document.querySelector(".lbs").value,
             totalCount: document.querySelector(".total-count").value,
             vendor: document.querySelector(".vendor").value,
-            item1: document.querySelector(".item1").value,
             ...items
         })
         console.log(response.data)
@@ -355,38 +354,38 @@ export default function Regular() {
                                                         <h2>ITEM CODE</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" className="item1" name="item-code-one" />
+                                                        <input type="text" className="item1" name="item1" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" className="item2" name="item-code-one" />
+                                                        <input type="text" className="item2" name="item2" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" className="item-code-one" name="item-code-one" />
+                                                        <input type="text" className="item3" name="item3" />
                                                     
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" className="item-code-one" name="item-code-one" />
+                                                        <input type="text" className="item4" name="item4" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item5" name="item5" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item6" name="item6" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item7" name="item7" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item8" name="item8" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item9" name="item9" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item10" name="item10" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item11" name="item11" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -394,37 +393,37 @@ export default function Regular() {
                                                         <h2>DESCRIPTION</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item12" name="item12" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item13" name="item13" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item14" name="item14" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item15" name="item15" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item16" name="item16" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item17" name="item17" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item18" name="item18" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item19" name="item19" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item20" name="item20" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item21" name="item21" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item22" name="item22" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -432,37 +431,37 @@ export default function Regular() {
                                                         <h2>LOCATION</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item-23" name="item-23" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item24" name="item24" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item25" name="item25" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item26" name="item26" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item27" name="item27" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item28" name="item28" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item29" name="item29" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item30" name="item30" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item31" name="item31" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item32" name="item32" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item33" name="item33" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -470,37 +469,37 @@ export default function Regular() {
                                                         <h2>SKID | BOX | CRATE</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item34" name="item34" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item35" name="item35" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item36" name="item36" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item37" name="item37" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item38" name="item38" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item39" name="item39" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item40" name="item40" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item41" name="item41" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item42" name="item42" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item43" name="item43" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item44" name="item44" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -508,37 +507,37 @@ export default function Regular() {
                                                         <h2>QUANTITY</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item45" name="item45" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item46" name="item46" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item47" name="item47" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item48" name="item48" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item49" name="item49" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item50" name="item50" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item51" name="item51" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item52" name="item52" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item53" name="item53" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item54" name="item54" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-code-one" name="item-code-one" />
+                                                    <input type="text" className="item55" name="item55" />
                                                     </div>
                                                 </div>
                                             </div>

@@ -11,7 +11,7 @@ export async function handler(event, context) {
 
     const productValues = []
 
-    for(let i = 1; i <= 64; i++) {
+    for(let i = 1; i <= 55; i++) {
       productValues.push(`item${[i]}`)
     }
 
@@ -65,7 +65,7 @@ export async function handler(event, context) {
     });
   };
    
-  for(let i = 18; i <= 33; i++) {
+  for(let i = 18; i <= 28; i++) {
       await updateValues(`Enter Data Here!A${i}`, newProductValues[`item${i-17}`])
   }
 
