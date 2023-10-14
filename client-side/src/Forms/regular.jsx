@@ -127,6 +127,8 @@ export default function Regular() {
         setLbs(lbsValue)
         setTotalCount(totalCountValue)
         setVendor(vendorValue)
+
+        
     }
 
     const nextInput = (e) => {

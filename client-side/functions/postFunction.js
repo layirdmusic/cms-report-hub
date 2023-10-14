@@ -15,6 +15,15 @@ export async function handler(event, context) {
     lbs = JSON.parse(event.body).lbs;
     totalCount = JSON.parse(event.body).totalCount;
     vendor = JSON.parse(event.body).vendor;
+
+    let items = {}
+
+    for(let i = 1; i <= 64; i++){
+      let itemName = `item${i}`
+      items[itemName]= JSON.parse(event.body)[itemName]
+    }
+
+    console.log(items)
   } catch(error) {
     console.error('Error parsing JSON:', error)
   }
