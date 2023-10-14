@@ -49,8 +49,8 @@ export default function Regular() {
 
         try {
         const response = await axios.post('.netlify/functions/postFunction',{
-            jobNameOne: document.querySelector(".form-job-name-one").value,
-            jobNameTwo: document.querySelector(".form-job-name-two").value
+            nameOne: document.querySelector(".name-one").value,
+            NameTwo: document.querySelector(".name-two").value
         })
         console.log(response.data)
         } catch(error) {
@@ -59,17 +59,15 @@ export default function Regular() {
 
         // window.open("https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/export?format=xlsx", "_blank")
     }
+
         const nextInput = (e) => {
-            
+
             if(e.keyCode === 13){
                 document.querySelector(".form-job-name-two").focus()
             }
-            
+
         }
-        
-        
-    
-    
+
 
     useEffect(() => {
         fetchData()
@@ -159,9 +157,11 @@ export default function Regular() {
 
                     <section className="form-inputs-section">
                         <form onSubmit={postData} className="form-inputs-content-container">
-                            <for className='form-inputs-container'>
+                            <div className='form-inputs-container'>
                                 <div className='form-customer-inputs-container'>
-                                    <h2 className='form-title'>CUSTOMER INFO</h2>
+                                    <h2 className='form-title'>CUSTOMER</h2>
+                                    <p className='form-subtitle'>Enter customer name and info</p>
+                                    {/* <div className='header-line'></div> */}
                                     <div className='customer-table-background'>
                                         <div className='customer-table'>
                                             <div className='desc'>
@@ -211,7 +211,7 @@ export default function Regular() {
                                                     
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="name-two" name="name-one" />
                                                 </div>
                                                 <div className='data-body'>
                                                     <input type="text" className="name-one" name="name-one" />
@@ -248,7 +248,8 @@ export default function Regular() {
 
 
                                 <div className='form-product-inputs-container'>
-                                    <h2 className='form-title'>PRODUCT INFO</h2>
+                                    <h2 className='form-title'>PRODUCT</h2>
+                                    <p className='form-subtitle'>Enter product details and location</p>
                                         <div className='scroll-box'>
                                             <div className='product-table-base'>
                                                 <div className='form-column'>
@@ -444,144 +445,10 @@ export default function Regular() {
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    {/* <table>
-                                        <thead>
-                                            <tr>
-                                                <th className='row-heading'>ITEM CODES</th>
-                                                <th className='row-heading'>DESCRIPTION</th>
-                                                <th className='row-heading'>LOCATION</th>
-                                                <th className='row-heading'>SKID/BX/CRATE #</th>
-                                                <th className='row-heading'>QUANTITY</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-divider' colSpan={5}></td>
-                                            </tr>
-                                            <tr>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="item-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                                <td className='row-inputs'><input type="text" className="item-code-one" name="desc-code-one" /></td>
-                                            </tr>
-                                        </tbody>
-                                    </table> */}
                                 </div>
-                            </for>
+                            </div>
                             <div className='form-submit-button-container'>
-                                <button type='submit' className='form-submit-button'>SUBMIT | UPDATE</button>
+                                <button type='submit' className='form-submit-button'><h2>SUBMIT | UPDATE</h2></button>
                             </div>
                         </form>
                             

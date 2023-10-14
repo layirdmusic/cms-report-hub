@@ -45,9 +45,10 @@ img {
   --light-black: #333333;
   --black-undertone: rgb(73, 72, 72);
   --white: #fcfcfc;
+  --white-undertone: #e0e0e0;
   --purple: #947DB0;
-  --blue: #6F93B4;
-  --green: #5D9299;
+  --blue: #8db0d3;
+  --green: #7bc0b3;
   --purple-highlight: #584777;
   --primary-ombre-one: linear-gradient(90deg, #CF94FE 14.87%, #7193C7 82.28%);
   --primary-ombre-two: linear-gradient(90deg, #805A9E 14.87%, #5E7AA4 82.28%);
@@ -91,9 +92,9 @@ img {
   padding: 10px;
 }
 
-.regular-form-title-container h2 {
+/* .regular-form-title-container h2 {
   font-size: 25px;
-}
+} */
 
 /* .regular-form-table-container h2,
 .regular-form-table-container p {
@@ -800,14 +801,33 @@ header {
   border-radius: 6px;
   background-color: var(--white);
   font-family: 'PrimaryFont1';
-  font-weight: 600;
-  font-size: 14px;
+  font-weight:600;
+  font-size: 12px;
   color: var(--medium-black);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+.form-submit-button:hover {
+  background-color: var(--dark-black);
+  color: var(--white);
+  box-shadow: 0px 4px 18px 0px #8A6BB1
+}
+
 
 .form-title {
   text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.form-subtitle {
   margin-bottom: 25px;
+  text-align: center;
+  color: var(--white-undertone);
+  font-family: 'SecondaryFont1';
+  font-size: 15px;
 }
 
 
@@ -919,6 +939,21 @@ header {
 .desc .form-header,
 .desc-body {
   padding-right: 15px;
+  border-bottom: var(--dark-black) solid 2px;
+}
+
+.desc .form-header {
+  background-color: var(--medium-black);
+}
+
+.desc-body  {
+  color: var(--blue);
+  background-color: var(--light-black);
+}
+
+.customer-table {
+  border-radius: 6px 6px 0 6px;
+  border-top: var(--white) 1px solid;
 }
 
 .product-table-base {
@@ -927,6 +962,8 @@ header {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  border-top: var(--white) 1px solid;
+  border-radius: 6px 6px 0 0;
 }
 
 .form-column {
@@ -952,8 +989,8 @@ header {
 
 .column-header,
 .form-header {
-  background-color: var(--white);
-  color: var(--medium-black);
+  background-color: var(--medium-black);
+  color: var(--green);
 }
 
 .product-table-base .header-one,
