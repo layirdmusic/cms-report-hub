@@ -11,7 +11,7 @@ export async function handler(event, context) {
     newValues = {}
     const responseBody = JSON.parse(event.body)
 
-    for(let i = 0; i < valuesToBeUpdated.lenth; i++){
+    for(let i = 0; i < valuesToBeUpdated.length; i++){
       newValues[valuesToBeUpdated[i] = responseBody[valuesToBeUpdated[i]]]
     }
 
