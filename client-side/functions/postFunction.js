@@ -5,24 +5,20 @@ export async function handler(event, context) {
 
   try {
 
-    let valuesToUpdate =  ["nameOne", "nameTwo"]
-    let newValues = []
-    // nameOne = JSON.parse(event.body).nameOne;
-    // nameTwo = JSON.parse(event.body).nameTwo;
-
-    for(let i = 0; i < valuesToUpdate.lenth; i++){
-      newValues.push(valuesToUpdate[i] = JSON.parse(event.body).valuesToUpdate[i])
+    let newValues = {
+      nameOne : JSON.parse(event.body).nameOne,
+      nameTwo : JSON.parse(event.body).nameTwo,
+      date : JSON.parse(event.body).date,
+      threePart : JSON.parse(event.body).threePart,
+      poNum : JSON.parse(event.body).poNum,
+      receivedBy : JSON.parse(event.body).receivedBy,
+      bolNum : JSON.parse(event.body).bolNum,
+      carrier : JSON.parse(event.body).carrier,
+      lbs : JSON.parse(event.body).lbs,
+      totalCount : JSON.parse(event.body).totalCount,
+      vendor : JSON.parse(event.body).vendor,
     }
-
-    date = JSON.parse(event.body).date;
-    threePart = JSON.parse(event.body).threePart;
-    poNum = JSON.parse(event.body).poNum;
-    receivedBy = JSON.parse(event.body).receivedBy;
-    bolNum = JSON.parse(event.body).bolNum;
-    carrier = JSON.parse(event.body).carrier;
-    lbs = JSON.parse(event.body).lbs;
-    totalCount = JSON.parse(event.body).totalCount;
-    vendor = JSON.parse(event.body).vendor;
+    
 
 
   } catch(error) {
@@ -63,17 +59,17 @@ export async function handler(event, context) {
     });
   };
 
-  await updateValues("Enter Data Here!B2", newValues[0]);
-  await updateValues("Enter Data Here!B3", newValues[1]);
-  await updateValues("Enter Data Here!B4", date);
-  await updateValues("Enter Data Here!B5", threePart);
-  await updateValues("Enter Data Here!B6", poNum);
-  await updateValues("Enter Data Here!B7", receivedBy);
-  await updateValues("Enter Data Here!B8", bolNum);
-  await updateValues("Enter Data Here!B9", carrier);
-  await updateValues("Enter Data Here!B10", lbs);
-  await updateValues("Enter Data Here!B11", totalCount);
-  await updateValues("Enter Data Here!B12", vendor);
+  await updateValues("Enter Data Here!B2", newValues.nameOne);
+  await updateValues("Enter Data Here!B3", newValues.nameTwo);
+  await updateValues("Enter Data Here!B4", newValues.date);
+  await updateValues("Enter Data Here!B5", newValues.threePart);
+  await updateValues("Enter Data Here!B6", newValues.poNum);
+  await updateValues("Enter Data Here!B7", newValues.receivedBy);
+  await updateValues("Enter Data Here!B8", newValues.bolNum);
+  await updateValues("Enter Data Here!B9", newValues.carrier);
+  await updateValues("Enter Data Here!B10", newValues.lbs);
+  await updateValues("Enter Data Here!B11", newValues.totalCount);
+  await updateValues("Enter Data Here!B12", newValues.vendor);
   
 
   return {
