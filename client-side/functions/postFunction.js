@@ -22,8 +22,6 @@ export async function handler(event, context) {
       let itemName = `item${i}`
       items[itemName]= JSON.parse(event.body)[itemName]
     }
-
-    console.log(items)
   } catch(error) {
     console.error('Error parsing JSON:', error)
   }
@@ -73,6 +71,7 @@ export async function handler(event, context) {
   await updateValues("Enter Data Here!B10", lbs);
   await updateValues("Enter Data Here!B11", totalCount);
   await updateValues("Enter Data Here!B12", vendor);
+  await updateValues("Enter Data Here!A18", item1);
 
   return {
     statusCode: 200,
