@@ -55,6 +55,14 @@ export default function Regular() {
         const response = await axios.post('.netlify/functions/postFunction',{
             nameOne: document.querySelector(".name-one").value,
             nameTwo: document.querySelector(".name-two").value,
+            threePart: document.querySelector(".three-part").value,
+            poNum: document.querySelector(".po-num").value,
+            receivedBy: document.querySelector(".received-by").value,
+            bolNum: document.querySelector(".bol-num").value,
+            carrier: document.querySelector(".carrier").value,
+            lbs: document.querySelector(".lbs").value,
+            totalCount: document.querySelector(".total-count").value,
+            vendor: document.querySelector(".vendor").value,
         })
         console.log(response.data)
         setSuccessTitle("SUCCESS")
@@ -98,7 +106,7 @@ export default function Regular() {
             </form> */}
 
             <div className="home-page-container">
-                <div className={`submit-popup-overlay ${formSubmitted? "overlay-show": "overlay-hide"}`}>
+                <div className={`submit-popup-overlay ${formSubmitted? "": "overlay-hide"}`}>
                     <div className='submit-popup-base'>
                         <div className='close-button-container'>
                             <img onClick={closePopup} className='close-button' src={CloseIcon} alt="" />
@@ -239,34 +247,34 @@ export default function Regular() {
                                                     
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-two" name="name-one" />
+                                                    <input type="text" className="name-two" name="name-two" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="date" name="date" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="three-part" name="three-part" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="po-num" name="po-num" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="received-by" name="received-by" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="bol-num" name="bol-num" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="carrier" name="carrier" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="lbs" name="lbs" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="total-count" name="total-count" />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="vendor" name="vendor" />
                                                 </div>
                                             </div>
                                         </div>

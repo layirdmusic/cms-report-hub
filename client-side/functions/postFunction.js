@@ -8,6 +8,14 @@ export async function handler(event, context) {
   try {
     nameOne = JSON.parse(event.body).nameOne;
     nameTwo = JSON.parse(event.body).nameTwo;
+    threePart = JSON.parse(event.body).threePart;
+    poNum = JSON.parse(event.body).poNum;
+    receivedBy = JSON.parse(event.body).receivedBy;
+    bolNum = JSON.parse(event.body).bolNum;
+    carrier = JSON.parse(event.body).carrier;
+    lbs = JSON.parse(event.body).lbs;
+    totalCount = JSON.parse(event.body).totalCount;
+    vendor = JSON.parse(event.body).vendor;
   } catch(error) {
     console.error('Error parsing JSON:', error)
   }
@@ -48,6 +56,14 @@ export async function handler(event, context) {
 
   await updateValues("Enter Data Here!B2", nameOne);
   await updateValues("Enter Data Here!B3", nameTwo);
+  await updateValues("Enter Data Here!B4", threePart);
+  await updateValues("Enter Data Here!B5", poNum);
+  await updateValues("Enter Data Here!B6", receivedBy);
+  await updateValues("Enter Data Here!B7", bolNum);
+  await updateValues("Enter Data Here!B8", carrier);
+  await updateValues("Enter Data Here!B9", lbs);
+  await updateValues("Enter Data Here!B10", totalCount);
+  await updateValues("Enter Data Here!B11", vendor);
 
   return {
     statusCode: 200,
