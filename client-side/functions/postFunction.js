@@ -4,8 +4,15 @@ export async function handler(event, context) {
 
 
   try {
-    nameOne = JSON.parse(event.body).nameOne;
-    nameTwo = JSON.parse(event.body).nameTwo;
+
+    let valuesToUpdate =  ["nameOne", "nameTwo"]
+    // nameOne = JSON.parse(event.body).nameOne;
+    // nameTwo = JSON.parse(event.body).nameTwo;
+
+    for(let i = 0; i < valuesToUpdate.lenth; i++){
+      valuesToUpdate[i] = JSON.parse(event.body).valuesToUpdate[i]
+    }
+
     date = JSON.parse(event.body).date;
     threePart = JSON.parse(event.body).threePart;
     poNum = JSON.parse(event.body).poNum;
@@ -16,12 +23,7 @@ export async function handler(event, context) {
     totalCount = JSON.parse(event.body).totalCount;
     vendor = JSON.parse(event.body).vendor;
 
-    let items = {}
 
-    for(let i = 1; i <= 64; i++){
-      let itemName = `item${i}`
-      items[itemName]= JSON.parse(event.body)[itemName]
-    }
   } catch(error) {
     console.error('Error parsing JSON:', error)
   }
@@ -71,7 +73,7 @@ export async function handler(event, context) {
   await updateValues("Enter Data Here!B10", lbs);
   await updateValues("Enter Data Here!B11", totalCount);
   await updateValues("Enter Data Here!B12", vendor);
-  await updateValues("Enter Data Here!A18", item1);
+  
 
   return {
     statusCode: 200,
