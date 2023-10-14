@@ -27,6 +27,21 @@ export default function Regular() {
     const [formSubmitted, setFormSubmitted] = useState(false)
     const [successTitle, setSuccessTitle] = useState(null)
     const [successMsg, setSuccessMsg] = useState(null)
+
+    // INPUT VAUES (START)
+        const [nameOne, setNameOne] = useState("")
+        const [nameTwo, setNameTwo] = useState("")
+        const [date, setDate] = useState("")
+        const [threePart, setThreePart] = useState("")
+        const [poNum, setPoNum] = useState("")
+        const [receivedBy, setReceivedBy] = useState("")
+        const [bolNum, setBolNum] = useState("")
+        const [carrier, setCarrier] = useState("")
+        const [lbs, setLbs] = useState("")
+        const [totalCount, setTotalCount] = useState("")
+        const [vendor, setVendor] = useState("")
+
+    // INPUT VAUES (START)
     
     const handleToggle = () => {
         setIsChecked(!isChecked)
@@ -55,6 +70,7 @@ export default function Regular() {
         const response = await axios.post('.netlify/functions/postFunction',{
             nameOne: document.querySelector(".name-one").value,
             nameTwo: document.querySelector(".name-two").value,
+            date: document.querySelector(".date").value,
             threePart: document.querySelector(".three-part").value,
             poNum: document.querySelector(".po-num").value,
             receivedBy: document.querySelector(".received-by").value,
@@ -67,6 +83,17 @@ export default function Regular() {
         console.log(response.data)
         setSuccessTitle("SUCCESS")
         setSuccessMsg("FORM SUBMITTED")
+        setNameOne("")
+        setNameTwo("")
+        setDate("")
+        setThreePart("")
+        setPoNum("")
+        setReceivedBy("")
+        setBolNum("")
+        setCarrier("")
+        setLbs("")
+        setTotalCount("")
+        setVendor("")
         } catch(error) {
             console.log(error)
             setSuccessTitle("FAILED")
@@ -99,12 +126,6 @@ export default function Regular() {
 
     return (
         <>
-            {/* <form className="form" id="sheetdb-form" onSubmit={postData}>
-            <input type="text" placeholder="Requests" className="form-request" name="request" />
-            <input type="text" placeholder="Name" id="name" className="form-name" />
-            <input className="button" type="submit"/>
-            </form> */}
-
             <div className="home-page-container">
                 <div className={`submit-popup-overlay ${formSubmitted? "": "overlay-hide"}`}>
                     <div className='submit-popup-base'>
@@ -243,38 +264,38 @@ export default function Regular() {
                                                     <h2>DATA INPUT</h2>
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-one" name="name-one" />
+                                                    <input type="text" className="name-one" name="name-one" value={nameOne} />
                                                     
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="name-two" name="name-two" />
+                                                    <input type="text" className="name-two" name="name-two" value={nameOne} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="date" name="date" />
+                                                    <input type="text" className="date" name="date" value={date} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="three-part" name="three-part" />
+                                                    <input type="text" className="three-part" name="three-part" value={threePart} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="po-num" name="po-num" />
+                                                    <input type="text" className="po-num" name="po-num" value={poNum} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="received-by" name="received-by" />
+                                                    <input type="text" className="received-by" name="received-by" value={receivedBy} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="bol-num" name="bol-num" />
+                                                    <input type="text" className="bol-num" name="bol-num" value={bolNum} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="carrier" name="carrier" />
+                                                    <input type="text" className="carrier" name="carrier" value={carrier} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="lbs" name="lbs" />
+                                                    <input type="text" className="lbs" name="lbs" value={lbs} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="total-count" name="total-count" />
+                                                    <input type="text" className="total-count" name="total-count" value={totalCount} />
                                                 </div>
                                                 <div className='data-body'>
-                                                    <input type="text" className="vendor" name="vendor" />
+                                                    <input type="text" className="vendor" name="vendor" value={vendor} />
                                                 </div>
                                             </div>
                                         </div>
