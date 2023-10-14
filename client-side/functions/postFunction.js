@@ -6,28 +6,28 @@ export async function handler(event, context) {
 
   try {
 
-    // const valuesToBeUpdated = ["nameOne", "nameTwo", "date", "threePart", "poNum", "receivedBy", "bolNum", "carrier", "lbs", "totalCount", "vendor"]
+    const valuesToBeUpdated = ["nameOne", "nameTwo", "date", "threePart", "poNum", "receivedBy", "bolNum", "carrier", "lbs", "totalCount", "vendor"]
 
-    // newValues = {}
-    // const responseBody = "JSON.parse(event.body)"
+    newValues = {}
+    const responseBody = JSON.parse(event.body)
 
-    // for(let i = 0; i < valuesToBeUpdated.length; i++){
-    //   newValues[valuesToBeUpdated[i] = responseBody[valuesToBeUpdated[i]]]
-    // }
-
-    newValues = {
-      nameOne : JSON.parse(event.body).nameOne,
-      nameTwo : JSON.parse(event.body).nameTwo,
-      date : JSON.parse(event.body).date,
-      threePart : JSON.parse(event.body).threePart,
-      poNum : JSON.parse(event.body).poNum,
-      receivedBy : JSON.parse(event.body).receivedBy,
-      bolNum : JSON.parse(event.body).bolNum,
-      carrier : JSON.parse(event.body).carrier,
-      lbs : JSON.parse(event.body).lbs,
-      totalCount : JSON.parse(event.body).totalCount,
-      vendor : JSON.parse(event.body).vendor,
+    for(let i = 0; i < valuesToBeUpdated.length; i++){
+      newValues[valuesToBeUpdated[i]] = responseBody[valuesToBeUpdated[i]]
     }
+
+    // newValues = {
+    //   nameOne : JSON.parse(event.body).nameOne,
+    //   nameTwo : JSON.parse(event.body).nameTwo,
+    //   date : JSON.parse(event.body).date,
+    //   threePart : JSON.parse(event.body).threePart,
+    //   poNum : JSON.parse(event.body).poNum,
+    //   receivedBy : JSON.parse(event.body).receivedBy,
+    //   bolNum : JSON.parse(event.body).bolNum,
+    //   carrier : JSON.parse(event.body).carrier,
+    //   lbs : JSON.parse(event.body).lbs,
+    //   totalCount : JSON.parse(event.body).totalCount,
+    //   vendor : JSON.parse(event.body).vendor,
+    // }
 
 
 
