@@ -64,18 +64,15 @@ export default function Regular() {
     }
 
 
-        let items
-        const [newItems, setNewItems] = useState(null)
+        let items = []
+    
     useEffect(() => {
-        items = {}
         for(let i = 1; i <= 55; i++){
             const elementValue = document.querySelector(`.item${i}`)
-            items[`item${i}`] = elementValue
+            items.push(`item${i}` + ":" + elementValue + ".value")
         }
 
-        setNewItems(items)
-
-        console.log(newItems)
+        console.log(items)
     },[])
 
 
@@ -95,7 +92,7 @@ export default function Regular() {
             lbs: document.querySelector(".lbs").value,
             totalCount: document.querySelector(".total-count").value,
             vendor: document.querySelector(".vendor").value,
-            newItems
+            ...items
         })
         console.log(response.data)
         setSuccessTitle("SUCCESS")
