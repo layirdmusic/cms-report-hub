@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import axios from 'axios';
 
@@ -7,10 +7,12 @@ import SearchIcon from "../images/search-icon.svg"
 import CMSLogoMobile from "../images/cms-logo-2.svg"
 import CMSIcon from "../images/cms-icon.svg"
 import Qoutes from "../Qoutes";
-import Greeting from "../images/greeting.svg"
+import RegularTitle from "../images/regular-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
+import RegularFormImage from "../images/regular-form-image.png"
+import DownArrow from "../images/down-arrow.svg"
 
 
 
@@ -154,6 +156,11 @@ export default function Regular() {
         setFormSubmitted(false)
     }
 
+    const scrollRef = useRef(null)
+
+    const handleScroll = () => {
+        scrollRef.current.scrollIntoView({behavior: 'smooth'})
+    }
 
 
 
@@ -221,31 +228,32 @@ export default function Regular() {
 
                     <header>
                         <img className="square-panels" src={SquarePanels} alt="" />
-                        <div className="header-content-background"></div>
-                        <div className="header-content">
-                            <div className="header-greeting-container">
-                                    <img src={Greeting} alt="" />
-                            </div>
-
-                            <div className="header-date-container">
-                                <h3>Todays is {currentWeekDay}, {currentMonth} {currentDayNum}</h3>
-                            </div>
-
-                            <div className="header-line"></div>
-
-                            <div className="header-qoute-container">
-                                <Qoutes />
-                            </div>
-                            <div className="header-scroll-button-highlight">
-                                <div className="header-scroll-button-background">
-                                    <a className="header-scroll-button" href="">Start Report</a>
+                        <div className="form-header-content-back"></div>
+                        <div className="form-header-content">
+                            <div className='header-text'>
+                                <div className="header-greeting-container">
+                                        <img src={RegularTitle} alt="" />
                                 </div>
+
+                                <div className="header-date-container">
+                                    <h3>EDIT & UPDATE</h3>
+                                </div>
+
+                                <div className='form-link-container'>
+                                    <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=472786389" target='_blank'> View Form</a>
+                                </div>
+                            </div>
+                            <div className='form-image-container'>
+                                <img src={RegularFormImage} alt="" />
+                            </div>
+                            <div onClick={handleScroll} className='arrow-icon-container'>
+                                <img src={DownArrow} alt="" />
                             </div>
                         </div>
 
                     </header>
 
-                    <section className="form-inputs-section">
+                    <section ref={scrollRef} className="form-inputs-section">
                         <form onSubmit={postData} className="form-inputs-content-container">
                             <div className='form-inputs-container'>
                                 <div className='form-customer-inputs-container'>
