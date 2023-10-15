@@ -68,7 +68,7 @@ export default function Regular() {
     
     useEffect(() => {
         for(let i = 1; i <= 55; i++){
-            items[`item${i}`] = document.querySelector(`.item${i}`).value
+            items[`item2`] = document.querySelector(`.item2`).value
         }
 
         console.log(items)
@@ -90,8 +90,6 @@ export default function Regular() {
             carrier: document.querySelector(".carrier").value,
             lbs: document.querySelector(".lbs").value,
             totalCount: document.querySelector(".total-count").value,
-            vendor: document.querySelector(".vendor").value,
-            item11: document.querySelector(".item11").value,
             ...items
         })
         console.log(response.data)
