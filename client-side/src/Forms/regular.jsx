@@ -64,15 +64,15 @@ export default function Regular() {
     }
 
 
-    // let items = {}
+    let items = {}
 
-    // useEffect(() => {
-    //     for(let i = 1; i <= 55; i++){
-    //         items[`item${i}`] = document.querySelector(`.item${i}`)
-    //     }
+    useEffect(() => {
+        for(let i = 1; i <= 55; i++){
+            items[`item${i}`] = document.querySelector(`.item${i}`)
+        }
 
-    //     console.log(items)
-    // },[])
+        console.log(items)
+    },[])
 
 
     const postData = async (e) => {
@@ -91,9 +91,7 @@ export default function Regular() {
             lbs: document.querySelector(".lbs").value,
             totalCount: document.querySelector(".total-count").value,
             vendor: document.querySelector(".vendor").value,
-            item1: document.querySelector(".item1").value,
-            item2: document.querySelector(".item2").value,
-            item3: document.querySelector(".item3").value,
+            ...items,
         })
         console.log(response.data)
         setSuccessTitle("SUCCESS")
