@@ -75,9 +75,9 @@ export async function handler(event, context) {
       await updateValues(`Enter Data Here!C${i}`, newProductValues[`item${i+5}`])
   }
   
-  // for(let i = 18; i <= 28; i++) {
-  //     await updateValues(`Enter Data Here!D${i}`, newProductValues[`item${i+16}`])
-  // }
+  for(let i = 18; i <= 28; i++) {
+      await updateValues(`Enter Data Here!D${i}`, newProductValues[`item${i+16}`])
+  }
   
   // for(let i = 18; i <= 28; i++) {
   //     await updateValues(`Enter Data Here!E${i}`, newProductValues[`item${i+27}`])
