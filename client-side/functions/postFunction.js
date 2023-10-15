@@ -40,17 +40,6 @@ export async function handler(event, context) {
   const googleSheets = google.sheets({ version: "v4", auth: client });
   const spreadsheetId = "1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A";
 
-  const metaData = await googleSheets.spreadsheets.get({
-    auth,
-    spreadsheetId
-  });
-
-  const getRows = await googleSheets.spreadsheets.values.get({
-    auth,
-    spreadsheetId,
-    range: "Enter Data Here!A:A"
-  });
-
   const updateValues = async (range, value) => {
     return googleSheets.spreadsheets.values.update({
       auth,
@@ -65,19 +54,16 @@ export async function handler(event, context) {
    
   for(let i = 18; i <= 28; i++) {
       await updateValues(`Enter Data Here!A${i}`, newProductValues[`item${i-17}`])
-  }
-  
-  for(let i = 18; i <= 28; i++) {
+
       await updateValues(`Enter Data Here!B${i}`, newProductValues[`item${i-6}`])
-  }
-  
-  for(let i = 18; i <= 28; i++) {
+
       await updateValues(`Enter Data Here!C${i}`, newProductValues[`item${i+5}`])
   }
   
-  for(let i = 18; i <= 28; i++) {
-      await updateValues(`Enter Data Here!D${i}`, newProductValues[`item${i+16}`])
-  }
+  
+  // for(let i = 18; i <= 28; i++) {
+  //     await updateValues(`Enter Data Here!D${i}`, newProductValues[`item${i+16}`])
+  // }
   
   // for(let i = 18; i <= 28; i++) {
   //     await updateValues(`Enter Data Here!E${i}`, newProductValues[`item${i+27}`])
