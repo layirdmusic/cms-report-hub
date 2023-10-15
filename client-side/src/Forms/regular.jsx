@@ -68,7 +68,7 @@ export default function Regular() {
     
     useEffect(() => {
         for(let i = 1; i <= 55; i++){
-            items[`item${i}`] = "document.querySelector" + (`.item${i}`) + ".value"
+            items[`item${i}`] = document.querySelector(`.item${i}`).value
         }
 
         console.log(items)
@@ -438,7 +438,7 @@ export default function Regular() {
                                                         <h2>LOCATION</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item-23" name="item-23" />
+                                                    <input type="text" className="item23" name="item-23" />
                                                     </div>
                                                     <div className='form-row column-body'>
                                                     <input type="text" className="item24" name="item24" />
