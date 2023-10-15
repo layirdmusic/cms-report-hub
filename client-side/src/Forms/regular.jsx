@@ -56,12 +56,7 @@ export default function Regular() {
         }
     },[scrollDisabled])
 
-    const [iframeKey, setIframeKey] = useState(0)
 
-    // const fetchData = async () => {
-    //     const results = await axios.get('/.netlify/functions/postFunction')
-    //     console.log(results.data.message)
-    // }
 
 
             let items
@@ -172,13 +167,6 @@ export default function Regular() {
     const closePopup = () => {
         setFormSubmitted(false)
     }
-
-    
-
-
-    // useEffect(() => {
-    //     fetchData()
-    // },[])
 
 
 
