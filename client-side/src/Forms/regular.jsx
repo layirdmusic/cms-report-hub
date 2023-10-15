@@ -97,8 +97,9 @@ export default function Regular() {
         setLbs("")
         setTotalCount("")
         setVendor("")
+        
         for (let i = 1; i <= 55; i++) {
-            itemData[`item${i}`] = ""
+            document.querySelector(`.item${i}`).value = ""
         }
 
 
