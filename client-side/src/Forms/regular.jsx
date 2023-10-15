@@ -64,10 +64,11 @@ export default function Regular() {
     }
 
 
-    
+            let items
+            
         useEffect(() => {
 
-            let items = {}
+            items = {}
             for(let i = 1; i <= 55; i++){
                let item = document.querySelector(`.item${i}`)
                items[`item${i}`] = item
