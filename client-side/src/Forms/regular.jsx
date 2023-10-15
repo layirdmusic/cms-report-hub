@@ -70,6 +70,8 @@ export default function Regular() {
         for(let i = 1; i <= 55; i++){
             items[`item${i}`] = document.querySelector(`.item${i}`)
         }
+
+        console.log(items)
     },[])
 
 
@@ -105,7 +107,7 @@ export default function Regular() {
         setLbs("")
         setTotalCount("")
         setVendor("")
-        console.log(items)
+        
 
 
     
