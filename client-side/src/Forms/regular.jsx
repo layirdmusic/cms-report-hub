@@ -64,18 +64,25 @@ export default function Regular() {
     }
 
 
-        let items
     
-    useEffect(() => {
+        useEffect(() => {
 
-        let items = {}
+            let items = {}
+            for(let i = 1; i <= 55; i++){
+               let item = document.querySelector(`.item${i}`)
+               items[`item${i}`] = item
+    
+               item.addEventListener('input', (event) => {
+                items[`item${i}`].value = e.target.value
+               })
+        
+            }
 
-        for (let i = 1; i <= 55; i++) {
-        items[`item${i}`] = `document.querySelector(".item${i}").value`
-}
+            console.log(items)
 
-        console.log(items)
-    },[])
+        },[])
+        
+
 
 
     const postData = async (e) => {
@@ -440,7 +447,7 @@ export default function Regular() {
                                                         <h2>LOCATION</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" className="item23" name="item-23" />
+                                                    <input type="text" className="item23" name="item23" />
                                                     </div>
                                                     <div className='form-row column-body'>
                                                     <input type="text" className="item24" name="item24" />
