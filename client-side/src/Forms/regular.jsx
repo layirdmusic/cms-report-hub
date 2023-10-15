@@ -63,12 +63,18 @@ export default function Regular() {
         console.log(results.data.message)
     }
 
-    const items = {}
 
-    for(let i = 1; i <= 55; i++){
-        items[`item${i}`] = document.querySelector(`.item${i}`).value
-    }
-    
+    let items = {}
+
+    useEffect(() => {
+        for(let i = 1; i <= 55; i++){
+            items[`item${i}`] = document.querySelector(`.item${i}`)
+        }
+
+        console.log(items)
+    },[])
+
+
     const postData = async (e) => {
         e.preventDefault()
 
