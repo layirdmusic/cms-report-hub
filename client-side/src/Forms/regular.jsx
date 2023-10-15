@@ -65,7 +65,7 @@ export default function Regular() {
 
 
             let items
-            
+
         useEffect(() => {
 
             items = {}
@@ -74,7 +74,7 @@ export default function Regular() {
                items[`item${i}`] = item
     
                item.addEventListener('input', (event) => {
-                items[`item${i}`].value = e.target.value
+                items[`item${i}`].value = event.target.value
                })
         
             }
