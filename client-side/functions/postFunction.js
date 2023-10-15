@@ -4,16 +4,14 @@ export async function handler(event, context) {
 
   let newCustomerValues
   let newProductValues
+  const productValues = []
+  for(let i = 1; i <= 55; i++) {
+    productValues.push(`item${[i]}`)
+  }
 
   try {
 
     const customerValues = ["nameOne", "nameTwo", "date", "threePart", "poNum", "receivedBy", "bolNum", "carrier", "lbs", "totalCount", "vendor"]
-
-    const productValues = []
-
-    for(let i = 1; i <= 55; i++) {
-      productValues.push(`item${[i]}`)
-    }
 
     newCustomerValues = {}
     const responseBody = JSON.parse(event.body)
