@@ -95,7 +95,7 @@ export default function Regular() {
             lbs: document.querySelector(".lbs").value,
             totalCount: document.querySelector(".total-count").value,
             vendor: document.querySelector(".vendor").value,
-            ...newItems
+            newItems
         })
         console.log(response.data)
         setSuccessTitle("SUCCESS")
