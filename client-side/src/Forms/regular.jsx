@@ -69,7 +69,8 @@ export default function Regular() {
     useEffect(() => {
         items = {}
         for(let i = 1; i <= 55; i++){
-            items[`item${i}`] = document.querySelector(`.item${i}`)
+            const elementValue = document.querySelector(`.item${i}`)
+            items[`item${i}`] = elementValue
         }
 
         console.log(items)
