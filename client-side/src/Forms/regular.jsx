@@ -71,17 +71,12 @@ export default function Regular() {
             items = {}
             for(let i = 1; i <= 55; i++){
                let item = document.querySelector(`.item${i}`)
-               items[`item${i}`] = item
-    
-               item.addEventListener('input', (event) => {
-                items[`item${i}`].value = event.target.value
-               })
-        
+               items[`item${i}`] = item.value
             }
 
             console.log(items)
 
-        },[])
+        },[document.querySelector(".item1")])
         
 
 
