@@ -62,15 +62,15 @@ export default function Regular() {
         const results = await axios.get('/.netlify/functions/postFunction')
         console.log(results.data.message)
     }
+
+    const items = {}
+
+    for(let i = 1; i <= 55; i++){
+        items[`item${i}`] = document.querySelector(`.item${i}`).value
+    }
     
     const postData = async (e) => {
         e.preventDefault()
-
-        const items = {}
-
-        for(let i = 1; i <= 55; i++){
-            items[`item${i}`] = document.querySelector(`.item${i}`).value
-        }
 
         try {
         const response = await axios.post('.netlify/functions/postFunction',{
