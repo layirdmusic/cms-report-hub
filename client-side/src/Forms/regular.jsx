@@ -59,19 +59,19 @@ export default function Regular() {
 
 
 
-            let items
+        //     let items
 
-        useEffect(() => {
+        // useEffect(() => {
 
-            items = {}
-            for(let i = 1; i <= 55; i++){
-               let item = document.querySelector(`.item${i}`)
-               items[`item${i}`] = item.value
-            }
+        //     items = {}
+        //     for(let i = 1; i <= 55; i++){
+        //        let item = document.querySelector(`.item${i}`)
+        //        items[`item${i}`] = item.value
+        //     }
 
-            console.log(items)
+        //     console.log(items)
 
-        },[document.querySelector(".item1")])
+        // },[document.querySelector(".item1")])
         
 
 
