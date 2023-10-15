@@ -57,7 +57,7 @@ export async function handler(event, context) {
 
       await updateValues(`Enter Data Here!B${i}`, newProductValues[`item${i-6}`])
 
-      // await updateValues(`Enter Data Here!C${i}`, newProductValues[`item${i+5}`])
+      await updateValues(`Enter Data Here!C${i}`, newProductValues[`item${i+5}`])
   }
   
   
