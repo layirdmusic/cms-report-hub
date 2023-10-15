@@ -85,6 +85,12 @@ export default function Regular() {
         e.preventDefault()
 
         try {
+
+            const itemData = {}
+            for (let i = 1; i <= 55; i++) {
+            itemData[`item${i}`] = document.querySelector(`.item${i}`).value
+        }
+
         const response = await axios.post('.netlify/functions/postFunction',{
             nameOne: document.querySelector(".name-one").value,
             nameTwo: document.querySelector(".name-two").value,
@@ -96,7 +102,8 @@ export default function Regular() {
             carrier: document.querySelector(".carrier").value,
             lbs: document.querySelector(".lbs").value,
             totalCount: document.querySelector(".total-count").value,
-            ...items
+            ...itemData
+        
         })
         console.log(response.data)
         setSuccessTitle("SUCCESS")
