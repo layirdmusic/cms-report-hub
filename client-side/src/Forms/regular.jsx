@@ -58,24 +58,6 @@ export default function Regular() {
 
 
 
-
-        //     let items
-
-        // useEffect(() => {
-
-        //     items = {}
-        //     for(let i = 1; i <= 55; i++){
-        //        let item = document.querySelector(`.item${i}`)
-        //        items[`item${i}`] = item.value
-        //     }
-
-        //     console.log(items)
-
-        // },[document.querySelector(".item1")])
-        
-
-
-
     const postData = async (e) => {
         e.preventDefault()
 
@@ -115,7 +97,9 @@ export default function Regular() {
         setLbs("")
         setTotalCount("")
         setVendor("")
-        
+        for (let i = 1; i <= 55; i++) {
+            itemData[`item${i}`] = ""
+        }
 
 
     
