@@ -7,7 +7,7 @@ import SearchIcon from "../images/search-icon.svg"
 import CMSLogoMobile from "../images/cms-logo-2.svg"
 import CMSIcon from "../images/cms-icon.svg"
 import Qoutes from "../Qoutes";
-import RegularTitle from "../images/regular-form-title.svg"
+import EmilieTitle from "../images/hotel-emilie-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
@@ -253,7 +253,7 @@ export default function HotelEmilie() {
                         <div className="form-header-content">
                             <div className='header-text'>
                                 <div className="header-greeting-container">
-                                        <img src={RegularTitle} alt="" />
+                                        <img src={EmilieTitle} alt="" />
                                 </div>
 
                                 <div className="header-date-container">
