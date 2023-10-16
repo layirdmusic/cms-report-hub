@@ -11,12 +11,12 @@ import RegularTitle from "../images/regular-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
-import RegularFormImage from "../images/regular-form-image.png"
+import FormImage from "../images/hotel-emilie-form-image.png"
 import DownArrow from "../images/down-arrow.svg"
 
 
 
-export default function Regular() {
+export default function HotelEmilie() {
 
     const [isChecked, setIsChecked] = useState(false)
     const [scrollDisabled, setScrollDisabled] = useState (false)
@@ -197,7 +197,7 @@ export default function Regular() {
                             <h2>{successTitle}</h2>
                             <p>{successMsg}</p>
                             <div className='form-link-container'>
-                                <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=472786389" target='_blank'> View Form</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1742155768" target='_blank'> View Form</a>
                             </div>
                             
                         </div>
@@ -261,11 +261,11 @@ export default function Regular() {
                                 </div>
 
                                 <div className='form-link-container'>
-                                    <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=472786389" target='_blank'> View Form</a>
+                                    <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1742155768" target='_blank'> View Form</a>
                                 </div>
                             </div>
                             <div className='form-image-container'>
-                                <img src={RegularFormImage} alt="" />
+                                <img src={FormImage} alt="" />
                             </div>
                             <div onClick={handleScroll} className='arrow-icon-container'>
                                 <img src={DownArrow} alt="" />

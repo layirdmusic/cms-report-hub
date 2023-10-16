@@ -131,7 +131,7 @@ export default function Home(){
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/hotel-emilie">
                                         <div className="customer-reports-icon">
                                             <img src={EmilieIcon} alt="" />
                                         </div>
