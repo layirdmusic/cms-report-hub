@@ -309,7 +309,7 @@ export default function Regular() {
                                                     <p>BOL Number:</p>
                                                 </div>
                                                 <div className='desc-body'>
-                                                    <p>Delivery Number:</p>
+                                                    <p>Delivery Carrier:</p>
                                                 </div>
                                                 <div className='desc-body'>
                                                     <p>Lbs:</p>
