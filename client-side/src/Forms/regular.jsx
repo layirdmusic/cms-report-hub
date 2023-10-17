@@ -130,6 +130,8 @@ export default function Regular() {
         const totalCountValue = document.querySelector(".total-count").value
         const vendorValue = document.querySelector(".vendor").value
 
+        e.target.value = e.target.value.toUpperCase()
+
         setNameOne(nameOneValue.toUpperCase())
         setNameTwo(nameTwoValue.toUpperCase())
         setDate(dateValue.toUpperCase())
@@ -376,38 +378,38 @@ export default function Regular() {
                                                         <h2>ITEM CODE</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item1" name="item1" />
+                                                        <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item1" name="item1" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item2" name="item2" />
+                                                        <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item2" name="item2" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item3" name="item3" />
+                                                        <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item3" name="item3" />
                                                     
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                        <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item4" name="item4" />
+                                                        <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item4" name="item4" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item5" name="item5" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item5" name="item5" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item6" name="item6" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item6" name="item6" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item7" name="item7" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item7" name="item7" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item8" name="item8" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item8" name="item8" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item9" name="item9" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item9" name="item9" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item10" name="item10" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item10" name="item10" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item11" name="item11" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item11" name="item11" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -415,37 +417,37 @@ export default function Regular() {
                                                         <h2>DESCRIPTION</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item12" name="item12" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item12" name="item12" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item13" name="item13" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item13" name="item13" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item14" name="item14" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item14" name="item14" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item15" name="item15" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item15" name="item15" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item16" name="item16" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item16" name="item16" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item17" name="item17" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item17" name="item17" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item18" name="item18" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item18" name="item18" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item19" name="item19" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item19" name="item19" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item20" name="item20" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item20" name="item20" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item21" name="item21" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item21" name="item21" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item22" name="item22" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item22" name="item22" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -453,37 +455,37 @@ export default function Regular() {
                                                         <h2>LOCATION</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item23" name="item23" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item23" name="item23" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item24" name="item24" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item24" name="item24" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item25" name="item25" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item25" name="item25" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item26" name="item26" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item26" name="item26" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item27" name="item27" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item27" name="item27" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item28" name="item28" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item28" name="item28" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item29" name="item29" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item29" name="item29" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item30" name="item30" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item30" name="item30" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item31" name="item31" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item31" name="item31" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item32" name="item32" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item32" name="item32" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item33" name="item33" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item33" name="item33" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -491,37 +493,37 @@ export default function Regular() {
                                                         <h2>SKID | BOX | CRATE</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item34" name="item34" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item34" name="item34" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item35" name="item35" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item35" name="item35" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item36" name="item36" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item36" name="item36" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item37" name="item37" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item37" name="item37" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item38" name="item38" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item38" name="item38" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item39" name="item39" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item39" name="item39" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item40" name="item40" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item40" name="item40" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item41" name="item41" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item41" name="item41" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item42" name="item42" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item42" name="item42" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item43" name="item43" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item43" name="item43" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item44" name="item44" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item44" name="item44" />
                                                     </div>
                                                 </div>
                                                 <div className='form-column'>
@@ -529,37 +531,37 @@ export default function Regular() {
                                                         <h2>QUANTITY</h2>
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item45" name="item45" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item45" name="item45" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item46" name="item46" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item46" name="item46" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item47" name="item47" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item47" name="item47" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item48" name="item48" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item48" name="item48" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item49" name="item49" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item49" name="item49" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item50" name="item50" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item50" name="item50" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item51" name="item51" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item51" name="item51" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item52" name="item52" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item52" name="item52" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item53" name="item53" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item53" name="item53" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item54" name="item54" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item54" name="item54" />
                                                     </div>
                                                     <div className='form-row column-body'>
-                                                    <input type="text" onKeyDown={(e) => nextInputProd(e)} className="item55" name="item55" />
+                                                    <input type="text" onChange={(e) => handleInputValueChange(e)}onKeyDown={(e) => nextInputProd(e)} className="item55" name="item55" />
                                                     </div>
                                                 </div>
                                             </div>
