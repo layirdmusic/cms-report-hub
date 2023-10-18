@@ -54,6 +54,20 @@ export async function handler(event, context) {
     });
   };
 
+  const appendValues = async (append) => {
+    return googleSheets.spreadsheets.values.batchUpdate({
+      auth,
+      spreadsheetId,
+      resource: {
+        data: append.map(([range, value]) => ({
+          range,
+          values: [[value]],
+        })),
+        valueInputOption: "USER_ENTERED",
+      },
+    });
+  }
+
   const updates = [];
 
   for (let i = 18; i <= 28; i++) {
@@ -78,9 +92,17 @@ export async function handler(event, context) {
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
 
+  const append = []
+
+  const customerAppend = [
+    ["Customer Database!A", newCustomerValues.threePart]
+  ]
+
   const allUpdates = updates.concat(customerUpdates);
+  const allAppend =  append.concat(customerAppend)
 
   await updateValues(allUpdates);
+  await appendValues(allAppend)
 
   return {
     statusCode: 200,
