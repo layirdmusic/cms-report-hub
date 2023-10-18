@@ -101,7 +101,7 @@ export async function handler(event, context) {
   const allUpdates = updates.concat(customerUpdates);
   const allAppend =  append.concat(customerAppend)
 
-  await updateValues(allUpdates);
+  // await updateValues(allUpdates);
   await appendValues(customerAppend)
 
   return {
