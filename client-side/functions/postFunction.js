@@ -102,7 +102,7 @@ export async function handler(event, context) {
   const allAppend =  append.concat(customerAppend)
 
   await updateValues(allUpdates);
-  await appendValues(allAppend)
+  // await appendValues(allAppend)
 
   return {
     statusCode: 200,
