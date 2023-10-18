@@ -130,17 +130,19 @@ export default function HotelEmilie() {
         const totalCountValue = document.querySelector(".total-count").value
         const vendorValue = document.querySelector(".vendor").value
 
-        setNameOne(nameOneValue)
-        setNameTwo(nameTwoValue)
-        setDate(dateValue)
-        setThreePart(threePartValue)
-        setPoNum(poNumValue)
-        setReceivedBy(receivedByValue)
-        setBolNum(bolNumValue)
-        setCarrier(carrierValue)
-        setLbs(lbsValue)
-        setTotalCount(totalCountValue)
-        setVendor(vendorValue)
+        e.target.value = e.target.value.toUpperCase()
+
+        setNameOne(nameOneValue.toUpperCase())
+        setNameTwo(nameTwoValue.toUpperCase())
+        setDate(dateValue.toUpperCase())
+        setThreePart(threePartValue.toUpperCase())
+        setPoNum(poNumValue.toUpperCase())
+        setReceivedBy(receivedByValue.toUpperCase())
+        setBolNum(bolNumValue.toUpperCase())
+        setCarrier(carrierValue.toUpperCase())
+        setLbs(lbsValue.toUpperCase())
+        setTotalCount(totalCountValue.toUpperCase())
+        setVendor(vendorValue.toUpperCase())
 
 
     }
