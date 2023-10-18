@@ -55,7 +55,7 @@ export async function handler(event, context) {
   };
 
   const appendValues = async (append) => {
-    return googleSheets.spreadsheets.values.batchUpdate({
+    return googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId,
       resource: {
