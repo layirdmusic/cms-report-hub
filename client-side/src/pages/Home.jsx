@@ -139,7 +139,7 @@ export default function Home(){
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/acorns-east-orange">
                                         <div   div className="customer-reports-icon">
                                             <img src={AcornsIcon} alt="" />
                                         </div>
@@ -163,7 +163,7 @@ export default function Home(){
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/toms-watch-bar">
                                         <div className="customer-reports-icon">
                                             <img src={TomsIcon} alt="" />
                                         </div>
