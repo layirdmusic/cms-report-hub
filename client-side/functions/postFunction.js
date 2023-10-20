@@ -54,14 +54,14 @@ export async function handler(event, context) {
     });
   };
 
-  const appendValues = async (values) => {
+  const appendValues = async (value) => {
     
       return googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
         range: "Enter Data Here!D2",
         valueInputOption: "USER_ENTERED",
-        values: values,
+        values: value,
       });
     }
 
