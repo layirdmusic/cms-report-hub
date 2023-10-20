@@ -56,7 +56,7 @@ export async function handler(event, context) {
 
   const appendValues = async (updates) => {
     const updatePromises = updates.map(([range, value]) => {
-      return googleSheets.spreadsheets.values.update({
+      return googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
         range,
