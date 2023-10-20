@@ -106,19 +106,17 @@ export async function handler(event, context) {
 
   const customerAppend = "New Value 1"
 
-// appendValues(customerAppend)
-//     .then(() => {
-//         console.log("Values appended successfully!");
-//     })
-//     .catch((error) => {
-//         console.error("Error appending values:", error);
-//     });
+appendValues(customerAppend)
+    .then(() => {
+        console.log("Values appended successfully!");
+    })
+    .catch((error) => {
+        console.error("Error appending values:", error);
+    });
 
   const allUpdates = updates.concat(customerUpdates);
-  const allAppend =  append.concat(customerAppend)
 
   await updateValues(allUpdates);
-  // await appendValues(customerAppend)
 
   return {
     statusCode: 200,
