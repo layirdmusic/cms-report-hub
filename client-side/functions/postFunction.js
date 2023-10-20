@@ -54,21 +54,17 @@ export async function handler(event, context) {
     });
   };
 
-  const appendValues = async (updates) => {
-    const updatePromises = updates.map(([range, value]) => {
+  const appendValues = async (values) => {
+    
       return googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
-        range,
+        range: "B",
         valueInputOption: "USER_ENTERED",
-        resource: {
-          values: [[value]],
-        },
+        values: [[values]],
       });
-    });
-  
-    return Promise.all(updatePromises);
-  };
+    }
+
 
   // const appendValues = async (append) => {
   //   return googleSheets.spreadsheets.values.append({
@@ -108,12 +104,7 @@ export async function handler(event, context) {
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
 
-  const append = []
-
-  const customerAppend = [
-    ["Customer Database!A1:A100", "New Value 1"],
-    ["Customer Database!B1:B100", "New Value 2"],
-];
+  const customerAppend = "New Value 1"
 
 appendValues(customerAppend)
     .then(() => {
