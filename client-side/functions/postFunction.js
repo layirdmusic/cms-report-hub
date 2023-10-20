@@ -104,7 +104,9 @@ export async function handler(event, context) {
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
 
-  const customerAppend = newCustomerValues.nameOne
+  const customerAppend = [
+    ['John Doe', 'johndoe@email.com', '1234567890'],
+  ]
 
 await appendValues(customerAppend)
     .then(() => {
