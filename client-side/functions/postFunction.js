@@ -60,7 +60,7 @@ export async function handler(event, context) {
       spreadsheetId,
       resource: {
         data: append.map(([range, value]) => ({
-          range: [[range]],
+          range,
           values: [[value]],
         })),
         valueInputOption: "USER_ENTERED",
@@ -101,8 +101,8 @@ export async function handler(event, context) {
   const allUpdates = updates.concat(customerUpdates);
   const allAppend =  append.concat(customerAppend)
 
-  // await updateValues(allUpdates);
-  await appendValues(customerAppend)
+  await updateValues(allUpdates);
+  // await appendValues(customerAppend)
 
   return {
     statusCode: 200,
