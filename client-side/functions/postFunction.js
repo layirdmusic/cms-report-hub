@@ -63,22 +63,7 @@ export async function handler(event, context) {
         valueInputOption: "USER_ENTERED",
         values: value,
       });
-    }
-
-
-  // const appendValues = async (append) => {
-  //   return googleSheets.spreadsheets.values.append({
-  //     auth,
-  //     spreadsheetId,
-  //     resource: {
-  //       data: append.map(([range, value]) => ({
-  //         range,
-  //         values: [[value]],
-  //       })),
-  //       valueInputOption: "USER_ENTERED",
-  //     },
-  //   });
-  // }
+  }
 
   const updates = [];
 
@@ -114,6 +99,7 @@ await appendValues(customerAppend)
     })
     .catch((error) => {
         console.error("Error appending values:", error);
+        updateValues([["Enter Data Here!F12", error]])
     });
 
   const allUpdates = updates.concat(customerUpdates);
