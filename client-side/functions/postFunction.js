@@ -105,8 +105,8 @@ export async function handler(event, context) {
   ];
 
   const customerAppend = [
-    ["Enter Data Here!D2", "Hello"],
-    ["Enter Data Here!E3", "Goodbye"],
+    ["Enter Data Here!D2", newCustomerValues.nameOne],
+    ["Enter Data Here!E3", newCustomerValues.nameTwo],
   ]
 
 await appendValues(customerAppend)
