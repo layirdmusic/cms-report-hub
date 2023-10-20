@@ -56,7 +56,7 @@ export async function handler(event, context) {
 
   const appendValues = async (updates) => {
     const updatePromises = updates.map(([range, value]) => {
-      return googleSheets.spreadsheets.values.append({
+      return googleSheets.spreadsheets.values.update({
         auth,
         spreadsheetId,
         range,
@@ -111,9 +111,17 @@ export async function handler(event, context) {
   const append = []
 
   const customerAppend = [
-    ["Customer Database!C1", newCustomerValues.threePart],
-    ["Customer Database!D1", newCustomerValues.nameOne]
-  ]
+    ["Customer Database!A1:A", "New Value 1"],
+    ["Customer Database!B1:B", "New Value 2"],
+];
+
+appendValues(customerAppend)
+    .then(() => {
+        console.log("Values appended successfully!");
+    })
+    .catch((error) => {
+        console.error("Error appending values:", error);
+    });
 
   const allUpdates = updates.concat(customerUpdates);
   const allAppend =  append.concat(customerAppend)
