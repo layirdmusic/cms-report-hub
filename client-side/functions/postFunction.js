@@ -60,7 +60,7 @@ export async function handler(event, context) {
       spreadsheetId,
       resource: {
         data: append.map(([range, value]) => ({
-          range,
+          range: [[range]],
           values: [[value]],
         })),
         valueInputOption: "USER_ENTERED",
