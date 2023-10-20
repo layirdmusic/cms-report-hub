@@ -59,7 +59,7 @@ export async function handler(event, context) {
       return googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
-        range: "A",
+        range: "B",
         valueInputOption: "USER_ENTERED",
         values: [[values]],
       });
