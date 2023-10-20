@@ -54,31 +54,31 @@ export async function handler(event, context) {
     });
   };
 
-  const appendValues = async (values) => {
+  // const appendValues = async (values) => {
     
-      return googleSheets.spreadsheets.values.update({
-        auth,
-        spreadsheetId,
-        range: "Enter Data Here!D2",
-        valueInputOption: "USER_ENTERED",
-        values: [[values]],
-      });
-    }
-
-
-  // const appendValues = async (append) => {
-  //   return googleSheets.spreadsheets.values.append({
-  //     auth,
-  //     spreadsheetId,
-  //     resource: {
-  //       data: append.map(([range, value]) => ({
-  //         range,
-  //         values: [[value]],
-  //       })),
+  //     return googleSheets.spreadsheets.values.update({
+  //       auth,
+  //       spreadsheetId,
+  //       range: "Enter Data Here!D2",
   //       valueInputOption: "USER_ENTERED",
-  //     },
-  //   });
-  // }
+  //       values: [[values]],
+  //     });
+  //   }
+
+
+  const appendValues = async (append) => {
+    return googleSheets.spreadsheets.values.append({
+      auth,
+      spreadsheetId,
+      resource: {
+        data: append.map(([range, value]) => ({
+          range,
+          values: [[value]],
+        })),
+        valueInputOption: "USER_ENTERED",
+      },
+    });
+  }
 
   const updates = [];
 
@@ -104,7 +104,10 @@ export async function handler(event, context) {
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
 
-  const customerAppend = [["New Value 2"]]
+  const customerAppend = [
+    ["Enter Data Here!D2", "Hello"],
+    ["Enter Data Here!E3", "Goodbye"],
+  ]
 
 await appendValues(customerAppend)
     .then(() => {
