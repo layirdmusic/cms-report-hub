@@ -95,8 +95,8 @@ export async function handler(event, context) {
   const append = []
 
   const customerAppend = [
-    ["Customer Database!A:A", newCustomerValues.threePart],
-    ["Customer Database!B:B", newCustomerValues.nameOne]
+    ["Customer Database!A1", newCustomerValues.threePart],
+    ["Customer Database!B1", newCustomerValues.nameOne]
   ]
 
   const allUpdates = updates.concat(customerUpdates);
