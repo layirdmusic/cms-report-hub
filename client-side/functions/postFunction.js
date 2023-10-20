@@ -40,18 +40,34 @@ export async function handler(event, context) {
   const googleSheets = google.sheets({ version: "v4", auth: client });
   const spreadsheetId = "1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A";
 
+  // const updateValues = async (updates) => {
+  //   return googleSheets.spreadsheets.values.batchUpdate({
+  //     auth,
+  //     spreadsheetId,
+  //     resource: {
+  //       data: updates.map(([range, value]) => ({
+  //         range,
+  //         values: [[value]],
+  //       })),
+  //       valueInputOption: "USER_ENTERED",
+  //     },
+  //   });
+  // };
+
   const updateValues = async (updates) => {
-    return googleSheets.spreadsheets.values.update({
-      auth,
-      spreadsheetId,
-      resource: {
-        data: updates.map(([range, value]) => ({
-          range,
-          values: [[value]],
-        })),
+    const updatePromises = updates.map(([range, value]) => {
+      return googleSheets.spreadsheets.values.update({
+        auth,
+        spreadsheetId,
+        range,
         valueInputOption: "USER_ENTERED",
-      },
+        resource: {
+          values: [[value]],
+        },
+      });
     });
+  
+    return Promise.all(updatePromises);
   };
 
   const appendValues = async (append) => {
