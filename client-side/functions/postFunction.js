@@ -106,7 +106,7 @@ export async function handler(event, context) {
 
   const customerAppend = ["New Value 2"]
 
-appendValues(customerAppend)
+await appendValues(customerAppend)
     .then(() => {
         console.log("Values appended successfully!");
     })
