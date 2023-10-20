@@ -111,8 +111,8 @@ export async function handler(event, context) {
   const append = []
 
   const customerAppend = [
-    ["Customer Database!A2:A", "New Value 1"],
-    ["Customer Database!B2:B", "New Value 2"],
+    ["Customer Database!A:A", "New Value 1"],
+    ["Customer Database!B:B", "New Value 2"],
 ];
 
 appendValues(customerAppend)
