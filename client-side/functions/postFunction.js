@@ -40,21 +40,21 @@ export async function handler(event, context) {
   const googleSheets = google.sheets({ version: "v4", auth: client });
   const spreadsheetId = "1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A";
 
-  // const updateValues = async (updates) => {
-  //   return googleSheets.spreadsheets.values.batchUpdate({
-  //     auth,
-  //     spreadsheetId,
-  //     resource: {
-  //       data: updates.map(([range, value]) => ({
-  //         range,
-  //         values: [[value]],
-  //       })),
-  //       valueInputOption: "USER_ENTERED",
-  //     },
-  //   });
-  // };
-
   const updateValues = async (updates) => {
+    return googleSheets.spreadsheets.values.batchUpdate({
+      auth,
+      spreadsheetId,
+      resource: {
+        data: updates.map(([range, value]) => ({
+          range,
+          values: [[value]],
+        })),
+        valueInputOption: "USER_ENTERED",
+      },
+    });
+  };
+
+  const appendValues = async (updates) => {
     const updatePromises = updates.map(([range, value]) => {
       return googleSheets.spreadsheets.values.append({
         auth,
@@ -70,19 +70,19 @@ export async function handler(event, context) {
     return Promise.all(updatePromises);
   };
 
-  const appendValues = async (append) => {
-    return googleSheets.spreadsheets.values.append({
-      auth,
-      spreadsheetId,
-      resource: {
-        data: append.map(([range, value]) => ({
-          range,
-          values: [[value]],
-        })),
-        valueInputOption: "USER_ENTERED",
-      },
-    });
-  }
+  // const appendValues = async (append) => {
+  //   return googleSheets.spreadsheets.values.append({
+  //     auth,
+  //     spreadsheetId,
+  //     resource: {
+  //       data: append.map(([range, value]) => ({
+  //         range,
+  //         values: [[value]],
+  //       })),
+  //       valueInputOption: "USER_ENTERED",
+  //     },
+  //   });
+  // }
 
   const updates = [];
 
@@ -111,15 +111,15 @@ export async function handler(event, context) {
   const append = []
 
   const customerAppend = [
-    ["Enter Data Here!C1:C", newCustomerValues.threePart],
-    ["Enter Data Here!D1:D", newCustomerValues.nameOne]
+    ["Customer Database!C1", newCustomerValues.threePart],
+    ["Customer Database!D1", newCustomerValues.nameOne]
   ]
 
   const allUpdates = updates.concat(customerUpdates);
   const allAppend =  append.concat(customerAppend)
 
-  // await updateValues(allUpdates);
-  await updateValues(customerAppend)
+  await updateValues(allUpdates);
+  await appendValues(customerAppend)
 
   return {
     statusCode: 200,
