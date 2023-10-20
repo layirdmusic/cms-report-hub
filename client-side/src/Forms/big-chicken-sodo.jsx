@@ -7,16 +7,16 @@ import SearchIcon from "../images/search-icon.svg"
 import CMSLogoMobile from "../images/cms-logo-2.svg"
 import CMSIcon from "../images/cms-icon.svg"
 import Qoutes from "../Qoutes";
-import FormTitle from "../images/acorns-form-title.svg"
+import FormTitle from "../images/big-chicken-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
-import FormImage from "../images/acorns-form-image.png"
+import FormImage from "../images/big-chicken-form-image.svg"
 import DownArrow from "../images/down-arrow.svg"
 
 
 
-export default function Regular() {
+export default function bigChicken() {
 
     const [isChecked, setIsChecked] = useState(false)
     const [scrollDisabled, setScrollDisabled] = useState (false)
@@ -183,8 +183,9 @@ export default function Regular() {
         scrollRef.current.scrollIntoView({behavior: 'smooth'})
     }
 
+    
     const handleRedirect = () => {
-        const links = ["https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1907283294","https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1056040944"]
+        const links = ["https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=991030726","https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1056040944"]
         
 
         for(let i = 0; i < links.length; i++) {
@@ -192,7 +193,6 @@ export default function Regular() {
         }
         
     }
-
 
 
     return (

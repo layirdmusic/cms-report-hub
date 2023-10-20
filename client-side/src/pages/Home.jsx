@@ -147,7 +147,7 @@ export default function Home(){
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/big-checkn-sodo">
                                         <div className="customer-reports-icon">
                                             <img src={ChickenIcon} alt="" />
                                         </div>

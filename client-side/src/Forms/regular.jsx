@@ -184,7 +184,15 @@ export default function Regular() {
     }
 
     
+    const handleRedirect = () => {
+        const links = ["https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=472786389","https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1056040944"]
+        
 
+        for(let i = 0; i < links.length; i++) {
+            window.open(links[i], '_blank')
+        }
+        
+    }
 
 
     return (
@@ -199,7 +207,7 @@ export default function Regular() {
                             <h2>{successTitle}</h2>
                             <p>{successMsg}</p>
                             <div className='form-link-container'>
-                                <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=472786389" target='_blank'> View Form</a>
+                                <a onClick={handleRedirect}> View Form</a>
                             </div>
                             
                         </div>
@@ -263,7 +271,7 @@ export default function Regular() {
                                 </div>
 
                                 <div className='form-link-container'>
-                                    <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=472786389" target='_blank'> View Form</a>
+                                    <a onClick={handleRedirect}> View Form</a>
                                 </div>
                             </div>
                             <div className='form-image-container'>

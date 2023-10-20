@@ -183,6 +183,13 @@ export default function HotelEmilie() {
         scrollRef.current.scrollIntoView({behavior: 'smooth'})
     }
 
+    const handleRedirect = () => {
+        const links = [
+            "https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1742155768"
+        ]
+            window.open(links, '_blank');
+    }
+
     
 
 
@@ -199,7 +206,7 @@ export default function HotelEmilie() {
                             <h2>{successTitle}</h2>
                             <p>{successMsg}</p>
                             <div className='form-link-container'>
-                                <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1742155768" target='_blank'> View Form</a>
+                                <a onClick={handleRedirect} href='https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1056040944' target="_blank"> View Form</a>
                             </div>
                             
                         </div>
@@ -263,7 +270,7 @@ export default function HotelEmilie() {
                                 </div>
 
                                 <div className='form-link-container'>
-                                    <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1742155768" target='_blank'> View Form</a>
+                                    <a onClick={handleRedirect}> View Form</a>
                                 </div>
                             </div>
                             <div className='form-image-container'>
