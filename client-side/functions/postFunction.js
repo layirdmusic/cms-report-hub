@@ -111,8 +111,8 @@ export async function handler(event, context) {
   const append = []
 
   const customerAppend = [
-    ["Customer Database!A4", "New Value 1"],
-    ["Customer Database!B4", "New Value 2"],
+    ["Customer Database!A2:A", "New Value 1"],
+    ["Customer Database!B2:B", "New Value 2"],
 ];
 
 appendValues(customerAppend)
@@ -127,7 +127,7 @@ appendValues(customerAppend)
   const allAppend =  append.concat(customerAppend)
 
   await updateValues(allUpdates);
-  await appendValues(customerAppend)
+  // await appendValues(customerAppend)
 
   return {
     statusCode: 200,
