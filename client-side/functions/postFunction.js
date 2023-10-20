@@ -56,7 +56,7 @@ export async function handler(event, context) {
 
   const updateValues = async (updates) => {
     const updatePromises = updates.map(([range, value]) => {
-      return googleSheets.spreadsheets.values.update({
+      return googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
         range,
@@ -111,8 +111,8 @@ export async function handler(event, context) {
   const append = []
 
   const customerAppend = [
-    ["Enter Data Here!C2", newCustomerValues.threePart],
-    ["Enter Data Here!D2", newCustomerValues.nameOne]
+    ["Enter Data Here!C:C", newCustomerValues.threePart],
+    ["Enter Data Here!D:D", newCustomerValues.nameOne]
   ]
 
   const allUpdates = updates.concat(customerUpdates);
