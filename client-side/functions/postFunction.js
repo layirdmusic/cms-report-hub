@@ -84,7 +84,7 @@ export async function handler(event, context) {
   }
 
   const customerUpdates = [
-    ["Enter Data Here!B2", newCustomerValues.nameOne],
+    ["Customer Database!A2", newCustomerValues.nameOne],
     ["Enter Data Here!B3", newCustomerValues.nameTwo],
     ["Enter Data Here!B4", newCustomerValues.date],
     ["Enter Data Here!B5", newCustomerValues.threePart],
