@@ -57,12 +57,12 @@ export async function handler(event, context) {
   const updateCellValue = async (value) => {
     try {
         // Update the value in the specified cell
-        const response = await googleSheets.spreadsheets.values.update({
-            auth,
-            spreadsheetId,
-            range: "Enter Data Here!B2",
-            valueInputOption: "USER_ENTERED",
-            values: value,
+        const response = googleSheets.spreadsheets.values.update({
+          auth,
+          spreadsheetId,
+          range: "Enter Data Here!B2",
+          valueInputOption: "USER_ENTERED",
+          values: value,
         });
 
         return response.data;
