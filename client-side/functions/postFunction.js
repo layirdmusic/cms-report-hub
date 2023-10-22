@@ -55,22 +55,37 @@ export async function handler(event, context) {
   };
   
   
-  const appendValues = async (updates) => {
-    return googleSheets.spreadsheets.values.append({
-      auth,
-      spreadsheetId,
-      range: "Customer Database!A1:K1",
-      resource: {
-        data: updates.map(([range, value]) => ({
-          range,
-          values: [[value]],
-        })),
-        valueInputOption: "USER_ENTERED",
-      },
-    });
-  };
+  // const appendValues = async (updates) => {
+  //   return googleSheets.spreadsheets.values.append({
+  //     auth,
+  //     spreadsheetId,
+  //     range: "Customer Database!A1:K1",
+  //     resource: {
+  //       data: updates.map(([range, value]) => ({
+  //         range,
+  //         values: [[value]],
+  //       })),
+  //       valueInputOption: "USER_ENTERED",
+  //     },
+  //   });
+  // };
 
-  
+let values = [["Department",    "Product",  "Cost", "Status"],
+["Clothes", "Socks", "12", "On Stock"],
+["Clothes", "Hat",  "15.99",    "Out of stock"],
+["Fresh","Apple",   "18",   "Pending"],
+["Fresh",   "Bannana",  "17", "Out of stock"],
+["Kitchen", "Spoon",    "0.99", "Out of stock"]]
+
+googleSheets.spreadsheets.values.append({
+  auth,
+  spreadsheetId,
+  range: "Sheet5",
+  valueInputOption: "USER_ENTERED",
+  resource: {
+    values: values,
+  },
+});
 
 
   const updates = [];
@@ -112,10 +127,10 @@ export async function handler(event, context) {
   ];
 
   const allUpdates = updates.concat(customerUpdates);
-  const allappend = customerUpdates;
+  // const allappend = customerUpdates;
 
   await updateValues(allUpdates);
-  await appendValues(allappend)
+  // await appendValues(allappend)
 
   return {
     statusCode: 200,
