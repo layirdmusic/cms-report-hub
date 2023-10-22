@@ -99,17 +99,17 @@ googleSheets.spreadsheets.values.append({
   ];
 
   const product = [
-    [newCustomerValuesnewProductValues[`item1`] ? newCustomerValues.threePart : null , newProductValues[`item1`]],
-    [newCustomerValuesnewProductValues[`item2`] ? newCustomerValues.threePart : null, newProductValues[`item2`]],
-    [newCustomerValuesnewProductValues[`item3`] ? newCustomerValues.threePart : null, newProductValues[`item3`]],
-    [newCustomerValuesnewProductValues[`item4`] ? newCustomerValues.threePart : null, newProductValues[`item4`]],
-    [newCustomerValuesnewProductValues[`item5`] ? newCustomerValues.threePart : null, newProductValues[`item5`]],
-    [newCustomerValuesnewProductValues[`item6`] ? newCustomerValues.threePart : null, newProductValues[`item6`]],
-    [newCustomerValuesnewProductValues[`item7`] ? newCustomerValues.threePart : null, newProductValues[`item7`]],
-    [newCustomerValuesnewProductValues[`item8`] ? newCustomerValues.threePart : null, newProductValues[`item8`]],
-    [newCustomerValuesnewProductValues[`item9`] ? newCustomerValues.threePart : null, newProductValues[`item9`]],
-    [newCustomerValuesnewProductValues[`item10`] ? newCustomerValues.threePart : null, newProductValues[`item10`]],
-    [newCustomerValuesnewProductValues[`item11`] ? newCustomerValues.threePart : null, newProductValues[`item11`]],
+    [newProductValues[`item1`] ? newCustomerValues.threePart : null , newProductValues[`item1`]],
+    [newProductValues[`item2`] ? newCustomerValues.threePart : null, newProductValues[`item2`]],
+    [newProductValues[`item3`] ? newCustomerValues.threePart : null, newProductValues[`item3`]],
+    [newProductValues[`item4`] ? newCustomerValues.threePart : null, newProductValues[`item4`]],
+    [newProductValues[`item5`] ? newCustomerValues.threePart : null, newProductValues[`item5`]],
+    [newProductValues[`item6`] ? newCustomerValues.threePart : null, newProductValues[`item6`]],
+    [newProductValues[`item7`] ? newCustomerValues.threePart : null, newProductValues[`item7`]],
+    [newProductValues[`item8`] ? newCustomerValues.threePart : null, newProductValues[`item8`]],
+    [newProductValues[`item9`] ? newCustomerValues.threePart : null, newProductValues[`item9`]],
+    [newProductValues[`item10`] ? newCustomerValues.threePart : null, newProductValues[`item10`]],
+    [newProductValues[`item11`] ? newCustomerValues.threePart : null, newProductValues[`item11`]],
   ];
 
   // for (let i = 18; i <= 28; i++) {
