@@ -54,16 +54,16 @@ export async function handler(event, context) {
     });
   };
 
-  const appendValues = async (value) => {
+  // const appendValues = async (value) => {
     
-      return googleSheets.spreadsheets.values.append({
-        auth,
-        spreadsheetId,
-        range: "Enter Data Here!D2",
-        valueInputOption: "USER_ENTERED",
-        values: value,
-      });
-  }
+  //     return googleSheets.spreadsheets.values.append({
+  //       auth,
+  //       spreadsheetId,
+  //       range: "Enter Data Here!D2",
+  //       valueInputOption: "USER_ENTERED",
+  //       values: value,
+  //     });
+  // }
 
   const updates = [];
 
@@ -93,14 +93,14 @@ export async function handler(event, context) {
     ['John Doe', 'johndoe@email.com', '1234567890'],
   ]
 
-await appendValues(customerAppend)
-    .then(() => {
-        console.log("Values appended successfully!");
-    })
-    .catch((error) => {
-        console.error("Error appending values:", error);
-        updateValues([["Enter Data Here!F12", error]])
-    });
+// await appendValues(customerAppend)
+//     .then(() => {
+//         console.log("Values appended successfully!");
+//     })
+//     .catch((error) => {
+//         console.error("Error appending values:", error);
+//         updateValues([["Enter Data Here!F12", error]])
+//     });
 
   const allUpdates = updates.concat(customerUpdates);
 
