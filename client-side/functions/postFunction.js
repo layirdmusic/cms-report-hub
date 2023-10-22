@@ -99,17 +99,17 @@ googleSheets.spreadsheets.values.append({
   ];
 
   const product = [
-    [newProductValues[`item1`] ? newCustomerValues.threePart : null, newProductValues[`item1`], newProductValues[`item12`], newProductValues[`item23`], newProductValues[`item34`], newProductValues[`item45`]],
-    [newProductValues[`item2`] ? newCustomerValues.threePart : null, newProductValues[`item2`], newProductValues[`item13`], newProductValues[`item24`], newProductValues[`item35`], newProductValues[`item46`]],
-    [newProductValues[`item3`] ? newCustomerValues.threePart : null, newProductValues[`item3`], newProductValues[`item14`], newProductValues[`item25`], newProductValues[`item36`], newProductValues[`item47`]],
-    [newProductValues[`item4`] ? newCustomerValues.threePart : null, newProductValues[`item4`], newProductValues[`item15`], newProductValues[`item26`], newProductValues[`item37`], newProductValues[`item48`]],
-    [newProductValues[`item5`] ? newCustomerValues.threePart : null, newProductValues[`item5`], newProductValues[`item16`], newProductValues[`item27`], newProductValues[`item38`], newProductValues[`item49`]],
-    [newProductValues[`item6`] ? newCustomerValues.threePart : null, newProductValues[`item6`], newProductValues[`item17`], newProductValues[`item28`], newProductValues[`item39`], newProductValues[`item50`]],
-    [newProductValues[`item7`] ? newCustomerValues.threePart : null, newProductValues[`item7`], newProductValues[`item18`], newProductValues[`item29`], newProductValues[`item40`], newProductValues[`item51`]],
-    [newProductValues[`item8`] ? newCustomerValues.threePart : null, newProductValues[`item8`], newProductValues[`item19`], newProductValues[`item30`], newProductValues[`item41`], newProductValues[`item52`]],
-    [newProductValues[`item9`] ? newCustomerValues.threePart : null, newProductValues[`item9`], newProductValues[`item20`], newProductValues[`item31`], newProductValues[`item42`], newProductValues[`item53`]],
-    [newProductValues[`item10`] ? newCustomerValues.threePart : null, newProductValues[`item10`], newProductValues[`item21`], newProductValues[`item32`], newProductValues[`item43`], newProductValues[`item54`]],
-    [newProductValues[`item11`] ? newCustomerValues.threePart : null, newProductValues[`item11`], newProductValues[`item22`], newProductValues[`item33`], newProductValues[`item44`], newProductValues[`item55`]],
+    [newProductValues[`item12`] ? newCustomerValues.threePart : null, newProductValues[`item1`], newProductValues[`item12`], newProductValues[`item23`], newProductValues[`item34`], newProductValues[`item45`]],
+    [newProductValues[`item13`] ? newCustomerValues.threePart : null, newProductValues[`item2`], newProductValues[`item13`], newProductValues[`item24`], newProductValues[`item35`], newProductValues[`item46`]],
+    [newProductValues[`item14`] ? newCustomerValues.threePart : null, newProductValues[`item3`], newProductValues[`item14`], newProductValues[`item25`], newProductValues[`item36`], newProductValues[`item47`]],
+    [newProductValues[`item15`] ? newCustomerValues.threePart : null, newProductValues[`item4`], newProductValues[`item15`], newProductValues[`item26`], newProductValues[`item37`], newProductValues[`item48`]],
+    [newProductValues[`item16`] ? newCustomerValues.threePart : null, newProductValues[`item5`], newProductValues[`item16`], newProductValues[`item27`], newProductValues[`item38`], newProductValues[`item49`]],
+    [newProductValues[`item17`] ? newCustomerValues.threePart : null, newProductValues[`item6`], newProductValues[`item17`], newProductValues[`item28`], newProductValues[`item39`], newProductValues[`item50`]],
+    [newProductValues[`item18`] ? newCustomerValues.threePart : null, newProductValues[`item7`], newProductValues[`item18`], newProductValues[`item29`], newProductValues[`item40`], newProductValues[`item51`]],
+    [newProductValues[`item19`] ? newCustomerValues.threePart : null, newProductValues[`item8`], newProductValues[`item19`], newProductValues[`item30`], newProductValues[`item41`], newProductValues[`item52`]],
+    [newProductValues[`item20`] ? newCustomerValues.threePart : null, newProductValues[`item9`], newProductValues[`item20`], newProductValues[`item31`], newProductValues[`item42`], newProductValues[`item53`]],
+    [newProductValues[`item21`] ? newCustomerValues.threePart : null, newProductValues[`item10`], newProductValues[`item21`], newProductValues[`item32`], newProductValues[`item43`], newProductValues[`item54`]],
+    [newProductValues[`item22`] ? newCustomerValues.threePart : null, newProductValues[`item11`], newProductValues[`item22`], newProductValues[`item33`], newProductValues[`item44`], newProductValues[`item55`]],
   ];
 
   // for (let i = 18; i <= 28; i++) {
