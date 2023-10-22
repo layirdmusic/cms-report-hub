@@ -61,7 +61,7 @@ export async function handler(event, context) {
       spreadsheetId,
       resource: {
         data: updates.map(([range, value]) => ({
-          range: [[range]],
+          range,
           values: [[value]],
         })),
         valueInputOption: "USER_ENTERED",
@@ -97,17 +97,17 @@ export async function handler(event, context) {
   ];
   
   const customerappend = [
-    ["Customer Database!B2", newCustomerValues.nameOne],
-    ["Customer Database!B3", newCustomerValues.nameTwo],
-    ["Customer Database!B4", newCustomerValues.date],
-    ["Customer Database!B5", newCustomerValues.threePart],
-    ["Customer Database!B6", newCustomerValues.poNum],
-    ["Customer Database!B7", newCustomerValues.receivedBy],
-    ["Customer Database!B8", newCustomerValues.bolNum],
-    ["Customer Database!B9", newCustomerValues.carrier],
-    ["Customer Database!B10", newCustomerValues.lbs],
-    ["Customer Database!B11", newCustomerValues.totalCount],
-    ["Customer Database!B12", newCustomerValues.vendor],
+    ["Customer Database!A2", newCustomerValues.nameOne],
+    ["Customer Database!B2", newCustomerValues.nameTwo],
+    ["Customer Database!C2", newCustomerValues.date],
+    ["Customer Database!D2", newCustomerValues.threePart],
+    ["Customer Database!E2", newCustomerValues.poNum],
+    ["Customer Database!F2", newCustomerValues.receivedBy],
+    ["Customer Database!G2", newCustomerValues.bolNum],
+    ["Customer Database!H2", newCustomerValues.carrier],
+    ["Customer Database!I2", newCustomerValues.lbs],
+    ["Customer Database!J2", newCustomerValues.totalCount],
+    ["Customer Database!K2", newCustomerValues.vendor],
   ];
 
   const allUpdates = updates.concat(customerUpdates);
