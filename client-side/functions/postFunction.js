@@ -57,7 +57,7 @@ export async function handler(event, context) {
   const updateCellValue = async (value) => {
     try {
         // Update the value in the specified cell
-        return googleSheets.spreadsheets.values.update({
+        return googleSheets.spreadsheets.values.batchUpdate({
           auth,
           spreadsheetId,
           range: "Customer Database!B2",
