@@ -61,7 +61,7 @@ export async function handler(event, context) {
           auth,
           spreadsheetId,
           range: "Enter Data Here!B2",
-          valueInputOption: "USER_ENTERED",
+          // valueInputOption: "USER_ENTERED",
           values: value,
         });
 
