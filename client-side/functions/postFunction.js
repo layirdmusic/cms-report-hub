@@ -98,9 +98,15 @@ export async function handler(event, context) {
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
 
-  const customerAppend = "hello"
+  const valueToUpdate = [["New Value"]]; // This should be a 2D array
 
-await updateCellValue("Hello")
+  updateCellValue(valueToUpdate)
+  .then((response) => {
+    console.log('Cell updated successfully:', response);
+  })
+  .catch((error) => {
+    console.error('Error updating cell:', error);
+  });
 
   const allUpdates = updates.concat(customerUpdates);
 
