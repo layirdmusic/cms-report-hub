@@ -59,6 +59,7 @@ export async function handler(event, context) {
     return googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId,
+      range: "Customer Database!A1:K1",
       resource: {
         data: updates.map(([range, value]) => ({
           range,
