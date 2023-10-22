@@ -99,8 +99,17 @@ googleSheets.spreadsheets.values.append({
   ];
 
   const product = [
-    [newProductValues[`item1`], ]
-   
+    [newProductValues[`item1`]],
+    [newProductValues[`item2`]],
+    [newProductValues[`item3`]],
+    [newProductValues[`item4`]],
+    [newProductValues[`item5`]],
+    [newProductValues[`item6`]],
+    [newProductValues[`item7`]],
+    [newProductValues[`item8`]],
+    [newProductValues[`item9`]],
+    [newProductValues[`item10`]],
+    [newProductValues[`item11`]],
   ];
 
   // for (let i = 18; i <= 28; i++) {
