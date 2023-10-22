@@ -98,12 +98,14 @@ googleSheets.spreadsheets.values.append({
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
 
-  let product
-  
+  const product = [];
+
   for (let i = 18; i <= 28; i++) {
-    product = [
-      [newProductValues[`item${i - 17}`]]
-    ]
+    updates.push([newProductValues[`item${i - 17}`]]);
+    updates.push([newProductValues[`item${i - 6}`]]);
+    updates.push([newProductValues[`item${i + 5}`]]);
+    updates.push([newProductValues[`item${i + 16}`]]);
+    updates.push([newProductValues[`item${i + 27}`]]);
   }
 
   googleSheets.spreadsheets.values.append({
