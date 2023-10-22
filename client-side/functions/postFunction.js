@@ -70,8 +70,9 @@ export async function handler(event, context) {
   //   });
   // };
 
-let values = [["Department",    "Product",  "Cost", "Status"],
-[newCustomerValues.nameOne, newCustomerValues.nameTwo, newCustomerValues.threePart, newCustomerValues.date]]
+let values = [
+[newCustomerValues.threePart, newCustomerValues.nameOne, newCustomerValues.nameTwo, newCustomerValues.date, newCustomerValues.poNum, newCustomerValues.receivedBy, newCustomerValues.bolNum, newCustomerValues.carrier, newCustomerValues.lbs, newCustomerValues.totalCount, newCustomerValues.vendor ]
+]
 
 googleSheets.spreadsheets.values.append({
   auth,
