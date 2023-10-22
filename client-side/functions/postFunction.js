@@ -56,12 +56,12 @@ export async function handler(event, context) {
   
   
   const appendValues = async (updates) => {
-    return googleSheets.spreadsheets.values.allappend({
+    return googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId,
       resource: {
         data: updates.map(([range, value]) => ({
-          range,
+          range: [[range]],
           values: [[value]],
         })),
         valueInputOption: "USER_ENTERED",
