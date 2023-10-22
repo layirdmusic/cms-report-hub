@@ -54,16 +54,25 @@ export async function handler(event, context) {
     });
   };
 
-  const appendValues = async (value) => {
-    
-      return googleSheets.spreadsheets.values.update({
-        auth,
-        spreadsheetId,
-        range: "Customer Database!A1",
-        valueInputOption: "USER_ENTERED",
-        values: value,
-      });
-  }
+  const updateCellValue = async (value) => {
+    try {
+        // Update the value in the specified cell
+        const response = await googleSheets.spreadsheets.values.update({
+            auth,
+            spreadsheetId,
+            range: "Customer Database!A2",
+            valueInputOption: "USER_ENTERED",
+            values: value,
+        });
+
+        return response.data;
+    } catch (error) {
+        // Handle any errors that might occur
+        console.error('Error updating cell value:', error);
+        throw error; // Rethrow the error for further handling if needed
+    }
+}
+
 
   const updates = [];
 
@@ -91,13 +100,7 @@ export async function handler(event, context) {
 
   const customerAppend = "hello"
 
-await appendValues(customerAppend)
-    .then(() => {
-        console.log("Values appended successfully!");
-    })
-    .catch((error) => {
-        console.error("Error appending values:", error);
-    });
+await updateCellValue("Hello")
 
   const allUpdates = updates.concat(customerUpdates);
 
