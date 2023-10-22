@@ -53,24 +53,23 @@ export async function handler(event, context) {
       },
     });
   };
+  
+  
+  const appendValues = async (updates) => {
+    return googleSheets.spreadsheets.values.append({
+      auth,
+      spreadsheetId,
+      resource: {
+        data: updates.map(([range, value]) => ({
+          range,
+          values: [[value]],
+        })),
+        valueInputOption: "USER_ENTERED",
+      },
+    });
+  };
 
-  const updateCellValue = async (value) => {
-    try {
-        // Update the value in the specified cell
-        return googleSheets.spreadsheets.values.batchUpdate({
-          auth,
-          spreadsheetId,
-          range: "Customer Database!B2",
-          valueInputOption: "USER_ENTERED",
-          values: value,
-        });
-
-    } catch (error) {
-        // Handle any errors that might occur
-        console.error('Error updating cell value:', error);
-        throw error; // Rethrow the error for further handling if needed
-    }
-}
+  
 
 
   const updates = [];
@@ -84,7 +83,7 @@ export async function handler(event, context) {
   }
 
   const customerUpdates = [
-    ["Customer Database!A2", newCustomerValues.nameOne],
+    ["Enter Data Here!B2", newCustomerValues.nameOne],
     ["Enter Data Here!B3", newCustomerValues.nameTwo],
     ["Enter Data Here!B4", newCustomerValues.date],
     ["Enter Data Here!B5", newCustomerValues.threePart],
@@ -96,20 +95,26 @@ export async function handler(event, context) {
     ["Enter Data Here!B11", newCustomerValues.totalCount],
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
-
-  const valueToUpdate = [["New Value"]]; // This should be a 2D array
-
-  updateCellValue(valueToUpdate)
-  .then((response) => {
-    console.log('Cell updated successfully:', response);
-  })
-  .catch((error) => {
-    console.error('Error updating cell:', error);
-  });
+  
+  const customerappend = [
+    ["Customer Database!B2", newCustomerValues.nameOne],
+    ["Customer Database!B3", newCustomerValues.nameTwo],
+    ["Customer Database!B4", newCustomerValues.date],
+    ["Customer Database!B5", newCustomerValues.threePart],
+    ["Customer Database!B6", newCustomerValues.poNum],
+    ["Customer Database!B7", newCustomerValues.receivedBy],
+    ["Customer Database!B8", newCustomerValues.bolNum],
+    ["Customer Database!B9", newCustomerValues.carrier],
+    ["Customer Database!B10", newCustomerValues.lbs],
+    ["Customer Database!B11", newCustomerValues.totalCount],
+    ["Customer Database!B12", newCustomerValues.vendor],
+  ];
 
   const allUpdates = updates.concat(customerUpdates);
+  const allappend = customerUpdates;
 
   await updateValues(allUpdates);
+  await appendValues(allappend)
 
   return {
     statusCode: 200,
