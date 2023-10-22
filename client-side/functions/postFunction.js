@@ -71,11 +71,7 @@ export async function handler(event, context) {
   // };
 
 let values = [["Department",    "Product",  "Cost", "Status"],
-["Clothes", "Socks", "12", "On Stock"],
-["Clothes", "Hat",  "15.99",    "Out of stock"],
-["Fresh","Apple",   "18",   "Pending"],
-["Fresh",   "Bannana",  "17", "Out of stock"],
-["Kitchen", "Spoon",    "0.99", "Out of stock"]]
+[newCustomerValues.nameOne, newCustomerValues.nameTwo, newCustomerValues.threePart, newCustomerValues.date]]
 
 googleSheets.spreadsheets.values.append({
   auth,
