@@ -55,22 +55,9 @@ export async function handler(event, context) {
   };
   
   
-  // const appendValues = async (updates) => {
-  //   return googleSheets.spreadsheets.values.append({
-  //     auth,
-  //     spreadsheetId,
-  //     range: "Customer Database!A1:K1",
-  //     resource: {
-  //       data: updates.map(([range, value]) => ({
-  //         range,
-  //         values: [[value]],
-  //       })),
-  //       valueInputOption: "USER_ENTERED",
-  //     },
-  //   });
-  // };
 
-let values = [
+
+let customer = [
 [newCustomerValues.threePart, newCustomerValues.nameOne, newCustomerValues.nameTwo, newCustomerValues.date, newCustomerValues.poNum, newCustomerValues.receivedBy, newCustomerValues.bolNum, newCustomerValues.carrier, newCustomerValues.lbs, newCustomerValues.totalCount, newCustomerValues.vendor ]
 ]
 
@@ -80,9 +67,11 @@ googleSheets.spreadsheets.values.append({
   range: "Customer Database",
   valueInputOption: "USER_ENTERED",
   resource: {
-    values: values,
+    values: customer,
   },
 });
+
+
 
 
   const updates = [];
@@ -108,20 +97,24 @@ googleSheets.spreadsheets.values.append({
     ["Enter Data Here!B11", newCustomerValues.totalCount],
     ["Enter Data Here!B12", newCustomerValues.vendor],
   ];
+
+  let product
   
-  const customerappend = [
-    ["Customer Database!A2", newCustomerValues.nameOne],
-    ["Customer Database!B2", newCustomerValues.nameTwo],
-    ["Customer Database!C2", newCustomerValues.date],
-    ["Customer Database!D2", newCustomerValues.threePart],
-    ["Customer Database!E2", newCustomerValues.poNum],
-    ["Customer Database!F2", newCustomerValues.receivedBy],
-    ["Customer Database!G2", newCustomerValues.bolNum],
-    ["Customer Database!H2", newCustomerValues.carrier],
-    ["Customer Database!I2", newCustomerValues.lbs],
-    ["Customer Database!J2", newCustomerValues.totalCount],
-    ["Customer Database!K2", newCustomerValues.vendor],
-  ];
+  for (let i = 18; i <= 28; i++) {
+    product = [
+      [newProductValues[`item${i - 17}`]]
+    ]
+  }
+
+  googleSheets.spreadsheets.values.append({
+    auth,
+    spreadsheetId,
+    range: "Product Database",
+    valueInputOption: "USER_ENTERED",
+    resource: {
+      values: product,
+    },
+  });
 
   const allUpdates = updates.concat(customerUpdates);
   // const allappend = customerUpdates;
