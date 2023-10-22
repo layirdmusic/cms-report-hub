@@ -77,7 +77,7 @@ let values = [
 googleSheets.spreadsheets.values.append({
   auth,
   spreadsheetId,
-  range: "Sheet5",
+  range: "Customer Database",
   valueInputOption: "USER_ENTERED",
   resource: {
     values: values,
