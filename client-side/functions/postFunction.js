@@ -57,7 +57,7 @@ export async function handler(event, context) {
   const updateCellValue = async (value) => {
     try {
         // Update the value in the specified cell
-        const response = await googleSheets.spreadsheets.values.update({
+        return googleSheets.spreadsheets.values.update({
           auth,
           spreadsheetId,
           range: "Enter Data Here!B2",
@@ -65,7 +65,6 @@ export async function handler(event, context) {
           values: value,
         });
 
-        return response.data;
     } catch (error) {
         // Handle any errors that might occur
         console.error('Error updating cell value:', error);
