@@ -6,6 +6,7 @@ import HotelEmilie from './Forms/hotel-emilie'
 import Acorns from './Forms/acorns-east-orange'
 import Toms from './Forms/toms-watch-bar'
 import bigChicken from './Forms/big-chicken-sodo'
+import Calculator from './pages/Calculator'
 
 
 
@@ -14,12 +15,12 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Calculator/>} />
       <Route path="/regular" element={<Regular />} />
       <Route path="/hotel-emilie" element={<HotelEmilie />} />
       <Route path="/acorns-east-orange" element={<Acorns />} />
       <Route path="/toms-watch-bar" element={<Toms />} />
-      <Route path="/big-checkn-sodo" element={<bigChicken />} />
+      <Route path="/big-chicken-sodo" element={<bigChicken />} />
     </Routes>
   )
 }

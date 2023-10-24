@@ -21,12 +21,12 @@ export default function Nav() {
                     <div className="nav-button-highlight"></div>
                 </li>
                 <li>
-                    <div className="nav-menu-button">
+                    <a href="https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=706279304" className="nav-menu-button">
                         <div className="nav-icon">
                             <img src={HubIcon} alt="" />
                         </div>
                         <h2>Customer Hub</h2>
-                    </div>
+                    </a>
                     <div className="nav-button-highlight"></div>
                 </li>
                 <li>
