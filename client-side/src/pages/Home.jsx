@@ -155,7 +155,7 @@ export default function Home(){
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/waldorf-astoria">
                                         <div className="customer-reports-icon">
                                             <img src={WoldarfIcon} alt="" />
                                         </div>

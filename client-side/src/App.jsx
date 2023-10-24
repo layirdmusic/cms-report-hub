@@ -5,8 +5,9 @@ import Regular from './Forms/regular'
 import HotelEmilie from './Forms/hotel-emilie'
 import Acorns from './Forms/acorns-east-orange'
 import Toms from './Forms/toms-watch-bar'
-import bigChicken from './Forms/big-chicken-sodo'
+import BigChicken from './Forms/big-chicken-sodo'
 import Calculator from './pages/Calculator'
+import Waldorf from './Forms/waldorf-astoria'
 
 
 
@@ -20,7 +21,8 @@ function App() {
       <Route path="/hotel-emilie" element={<HotelEmilie />} />
       <Route path="/acorns-east-orange" element={<Acorns />} />
       <Route path="/toms-watch-bar" element={<Toms />} />
-      <Route path="/big-chicken-sodo" element={<bigChicken />} />
+      <Route path="/big-chicken-sodo" element={<BigChicken />} />
+      <Route path="/waldorf-astoria" element={<Waldorf />} />
       <Route path="/calculator" element={<Calculator />} />
     </Routes>
   )

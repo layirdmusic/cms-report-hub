@@ -7,16 +7,16 @@ import SearchIcon from "../images/search-icon.svg"
 import CMSLogoMobile from "../images/cms-logo-2.svg"
 import CMSIcon from "../images/cms-icon.svg"
 import Qoutes from "../Qoutes";
-import FormTitle from "../images/big-chicken-form-title.svg"
+import FormTitle from "../images/waldorf-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
-import FormImage from "../images/big-chicken-form-image.svg"
+import FormImage from "../images/waldorf-form-image.png"
 import DownArrow from "../images/down-arrow.svg"
 
 
 
-export default function BigChicken() {
+export default function Waldorf() {
 
     const [isChecked, setIsChecked] = useState(false)
     const [scrollDisabled, setScrollDisabled] = useState (false)
@@ -185,7 +185,7 @@ export default function BigChicken() {
 
     
     const handleRedirect = () => {
-        const links = ["https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=991030726","https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1056040944"]
+        const links = ["https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=2074037324","https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1056040944"]
         
 
         for(let i = 0; i < links.length; i++) {
