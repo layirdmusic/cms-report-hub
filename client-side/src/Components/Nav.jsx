@@ -30,6 +30,15 @@ export default function Nav() {
                     <div className="nav-button-highlight"></div>
                 </li>
                 <li>
+                    <a href="/calculator" className="nav-menu-button">
+                        <div className="nav-icon">
+                            <img src={NotesIcon} alt="" />
+                        </div>
+                        <h2>Calculator</h2>
+                    </a>
+                    <div className="nav-button-highlight"></div>
+                </li>
+                <li>
                     <div className="nav-menu-button">
                         <div className="nav-icon">
                             <img src={NotesIcon} alt="" />

@@ -15,12 +15,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Calculator/>} />
+      <Route path="/" element={<Home/>} />
       <Route path="/regular" element={<Regular />} />
       <Route path="/hotel-emilie" element={<HotelEmilie />} />
       <Route path="/acorns-east-orange" element={<Acorns />} />
       <Route path="/toms-watch-bar" element={<Toms />} />
       <Route path="/big-chicken-sodo" element={<bigChicken />} />
+      <Route path="/calculator" element={<Calculator />} />
     </Routes>
   )
 }
