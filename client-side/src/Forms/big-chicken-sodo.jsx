@@ -11,7 +11,7 @@ import FormTitle from "../images/big-chicken-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
-import FormImage from "../images/big-chicken-form-image.svg"
+import FormImage from "../images/big-chicken-form-image.png"
 import DownArrow from "../images/down-arrow.svg"
 
 
