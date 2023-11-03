@@ -2,6 +2,7 @@ import React from "react";
 import HomeIcon from "../images/home-icon.svg"
 import HubIcon from "../images/hub-icon.svg"
 import NotesIcon from "../images/notes-icon.svg"
+import CalcIcon from "../images/calc-icon.svg"
 
 export default function Nav() {
 
@@ -32,7 +33,7 @@ export default function Nav() {
                 <li>
                     <a href="/calculator" className="nav-menu-button">
                         <div className="nav-icon">
-                            <img src={NotesIcon} alt="" />
+                            <img src={CalcIcon} alt="" />
                         </div>
                         <h2>Calculator</h2>
                     </a>
