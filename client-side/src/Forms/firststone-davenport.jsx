@@ -11,7 +11,7 @@ import FireStoneTitle from "../images/hotel-emilie-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
-import FormImage from "../images/firestone-davenport-form-image.png"
+import FormImage from "../images/firestone-davenport-form-image.svg"
 import DownArrow from "../images/down-arrow.svg"
 
 
