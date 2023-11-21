@@ -12,6 +12,7 @@ import ChickenIcon from "../images/chicken-icon.svg"
 import AcornsIcon from "../images/acorns-icon.svg"
 import EmilieIcon from "../images/emilie-icon.svg"
 import RegularIcon from "../images/regular-icon.svg"
+import FireStoneDIcon from "../images/firestone-davenport-icon.svg"
 import DamageIcon from "../images/damage-icon.svg"
 import VaultedIcon from "../images/vaulted-icon.svg"
 import PackingIcon from "../images/packing-icon.svg"
@@ -169,6 +170,14 @@ export default function Home(){
                                             <img src={TomsIcon} alt="" />
                                         </div>
                                         TOMS WATCH BAR
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/firestone-davenport">
+                                        <div className="customer-reports-icon">
+                                            <img src={FireStoneDIcon} alt="" />
+                                        </div>
+                                        FIRESTONE DAVENPORT
                                     </a>
                                 </li>
                             </ul>
