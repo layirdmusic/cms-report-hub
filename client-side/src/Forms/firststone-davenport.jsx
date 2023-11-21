@@ -7,11 +7,11 @@ import SearchIcon from "../images/search-icon.svg"
 import CMSLogoMobile from "../images/cms-logo-2.svg"
 import CMSIcon from "../images/cms-icon.svg"
 import Qoutes from "../Qoutes";
-import FireStoneTitle from "../images/hotel-emilie-form-title.svg"
+import FireStoneTitle from "../images/firestone-davenport-form-title.svg"
 import SquarePanels from "../images/square-panels2.svg"
 import Nav from '../Components/Nav';
 import CloseIcon from "../images/close-icon.svg"
-import FormImage from "../images/firestone-davenport-form-image.svg"
+import FormImage from "../images/firestone-davenport-form-image.png"
 import DownArrow from "../images/down-arrow.svg"
 
 
