@@ -185,7 +185,7 @@ export default function FireStoneD() {
 
     const handleRedirect = () => {
         const links = [
-            "https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1742155768"
+            "https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=29433989"
         ]
             window.open(links, '_blank');
     }
@@ -206,7 +206,7 @@ export default function FireStoneD() {
                             <h2>{successTitle}</h2>
                             <p>{successMsg}</p>
                             <div className='form-link-container'>
-                                <a onClick={handleRedirect} href='https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=1056040944' target="_blank"> View Form</a>
+                                <a onClick={handleRedirect} href='https://docs.google.com/spreadsheets/d/1SsmyuqEiCMH8mCria-Ea2v53CCJC43yMWYEQGesQ27A/edit#gid=29433989' target="_blank"> View Form</a>
                             </div>
                             
                         </div>
